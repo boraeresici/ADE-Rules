@@ -10,6 +10,8 @@ suggested_tools: ["ESLint", "Prettier", "Black", "isort", "gofmt"]
 related_rules: ["readability-clarity"]
 ---
 
+# Rule: Consistency
+
 **Description:** Follow a consistent coding style, naming convention, and architectural pattern throughout the project. Use linters and formatters to enforce this automatically.
 
 **Rationale:** Consistency makes the codebase predictable and easier to navigate. It allows developers to focus on the logic rather than deciphering different styles in different parts of the application.
@@ -35,3 +37,9 @@ function Get_User_Profile() {
   // ...
 }
 ```
+
+---
+
+**Automation Potential:** Linters (e.g., ESLint) and formatters (e.g., Prettier, Black) can automatically enforce coding style and naming conventions. Code reviews are essential for architectural consistency.
+
+**Further Reading:** [Optional: Links to external resources, articles, or documentation related to this rule.]

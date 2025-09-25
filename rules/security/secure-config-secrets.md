@@ -10,11 +10,46 @@ suggested_tools: ["AWS Secrets Manager", "Azure Key Vault", "HashiCorp Vault", "
 related_rules: ["least-privilege", "strong-auth-crypto"]
 ---
 
-**Description:** Avoid security misconfigurations by using hardened base images and automated validation. Never store secrets (API keys, passwords) in source code. Use a dedicated secrets management service.
+# Rule: Secure Configuration and Secrets Management
 
-**Rationale:** Misconfigurations are a common cause of breaches. Storing secrets in code is a critical vulnerability that can be easily exploited if the code is leaked.
+**Description:** This rule emphasizes the critical importance of avoiding security misconfigurations and strictly prohibits storing sensitive information (secrets like API keys, database passwords, private keys) directly within source code. Instead, it mandates the use of dedicated, secure secrets management services.
 
-**Good Practice:**
-- Remove or disable unnecessary features and components.
-- Use AWS Secrets Manager, Azure Key Vault, or HashiCorp Vault for secrets.
-- Inject secrets into the application environment at runtime.
+**Rationale:** Security misconfigurations are a leading cause of data breaches, often resulting from default settings, incomplete configurations, or exposed interfaces. Storing secrets in source code is a severe vulnerability; if the code repository is compromised or accidentally exposed, all embedded secrets become immediately accessible to attackers, leading to widespread system compromise. Dedicated secrets management services provide a secure, centralized, and auditable way to handle sensitive credentials.
+
+### Good Practice:
+```yaml
+# Example: Injecting secrets into a Kubernetes Pod via a Secret object
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+spec:
+  containers:
+  - name: my-app-container
+    image: my-app-image
+    env:
+    - name: DB_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: my-db-secret
+          key: password
+```
+*Example: Using Kubernetes Secrets to inject a database password as an environment variable at runtime, avoiding hardcoding in code.*
+
+### Bad Practice:
+```python
+# Example: Hardcoding API keys directly in source code
+API_KEY = "sk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+DB_PASSWORD = "my_super_secret_password"
+
+def make_api_call():
+    # ... use API_KEY ...
+    pass
+```
+*Example: Hardcoding sensitive API keys or passwords directly in source code, making them vulnerable if the code is exposed.*
+
+---
+
+**Automation Potential:** Static Application Security Testing (SAST) tools can detect hardcoded secrets in source code. Infrastructure as Code (IaC) tools can enforce secure configuration practices. CI/CD checks can validate that secrets are not committed to repositories. Dedicated secrets management services automate the secure storage and retrieval of credentials.
+
+**Further Reading:** [Optional: Links to external resources, articles, or documentation related to this rule.]

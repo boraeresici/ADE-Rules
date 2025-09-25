@@ -10,6 +10,8 @@ suggested_tools: ["SonarQube", "ESLint", "Pylint"]
 related_rules: ["readability-clarity", "refactoring", "srp"]
 ---
 
+# Rule: Simplicity and Conciseness (KISS)
+
 **Description:** Keep It Simple, Stupid (KISS). Prefer simple, straightforward solutions over complex ones. Each function and class should have a single, well-defined responsibility.
 
 **Rationale:** Simple code is less prone to bugs and easier to understand. Over-engineering can lead to unnecessary complexity, making the system harder to manage.
@@ -34,3 +36,9 @@ function processUserData(user) {
   return false;
 }
 ```
+
+---
+
+**Automation Potential:** Static analysis tools (e.g., SonarQube, ESLint, Pylint) can help identify overly complex functions or classes. Code reviews are crucial for evaluating the overall simplicity of a solution.
+
+**Further Reading:** [Optional: Links to external resources, articles, or documentation related to this rule.]
