@@ -39,7 +39,7 @@ spec:
 ### Bad Practice:
 ```python
 # Example: Hardcoding API keys directly in source code
-API_KEY = "sk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+API_KEY = "your_api_key_here"
 DB_PASSWORD = "my_super_secret_password"
 
 def make_api_call():
