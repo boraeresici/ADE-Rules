@@ -1,0 +1,74 @@
+[
+  {
+    "id": "task-management",
+    "name": "Task Management",
+    "description": "Best practices for defining, organizing, and tracking tasks with clear descriptions and acceptance criteria.",
+    "documentation": "task-management.md",
+    "tags": ["project-management", "agile", "tasks"],
+    "severity": "high",
+    "applies_to": ["project-management", "all"],
+    "automation_potential": ["tool-integration"],
+    "suggested_tools": ["Jira", "Trello", "Asana"],
+    "related_rules": ["version-control", "methodology"]
+  },
+  {
+    "id": "version-control",
+    "name": "Version Control Best Practices",
+    "description": "Guidelines for using Git effectively, including feature branches, meaningful commits, and pull request reviews.",
+    "documentation": "version-control.md",
+    "tags": ["git", "version-control", "collaboration"],
+    "severity": "critical",
+    "applies_to": ["project-management", "all"],
+    "automation_potential": ["ci-cd-check", "linter"],
+    "suggested_tools": ["Git", "GitHub", "GitLab", "Bitbucket"],
+    "related_rules": ["task-management", "code-review"]
+  },
+  {
+    "id": "project-structure",
+    "name": "Project Structure and Code Quality",
+    "description": "Principles for maintaining a modular, scalable, and high-quality codebase through refactoring and static analysis.",
+    "documentation": "project-structure.md",
+    "tags": ["architecture", "code-quality", "refactoring"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube", "ESLint", "Pylint"],
+    "related_rules": ["refactoring", "code-quality-analysis"]
+  },
+  {
+    "id": "methodology",
+    "name": "Agile Methodology",
+    "description": "Guidelines for adopting Agile methodologies like Scrum or Kanban for iterative development, planning, and continuous improvement.",
+    "documentation": "methodology.md",
+    "tags": ["agile", "scrum", "kanban", "methodology"],
+    "severity": "medium",
+    "applies_to": ["project-management", "all"],
+    "automation_potential": ["tool-integration"],
+    "suggested_tools": ["Jira", "Trello", "Asana"],
+    "related_rules": ["task-management", "communication-and-documentation"]
+  },
+  {
+    "id": "communication-and-documentation",
+    "name": "Communication and Documentation",
+    "description": "Best practices for effective team communication, progress reporting, and documenting technical decisions.",
+    "documentation": "communication-and-documentation.md",
+    "tags": ["communication", "documentation", "collaboration"],
+    "severity": "high",
+    "applies_to": ["project-management", "all"],
+    "automation_potential": ["tool-integration", "manual-review"],
+    "suggested_tools": ["Confluence", "Notion", "Slack", "Microsoft Teams"],
+    "related_rules": ["task-management", "code-review"]
+  },
+  {
+    "id": "quality-assurance",
+    "name": "Quality Assurance",
+    "description": "Guidelines for ensuring software quality through automated testing, mandatory code reviews, and performance/security testing.",
+    "documentation": "quality-assurance.md",
+    "tags": ["qa", "testing", "ci-cd", "quality"],
+    "severity": "critical",
+    "applies_to": ["project-management", "all"],
+    "automation_potential": ["ci-cd-check", "test-runner", "code-review"],
+    "suggested_tools": ["Jest", "Pytest", "Cypress", "Selenium", "SonarQube"],
+    "related_rules": ["comprehensive-multi-layered-testing", "code-review"]
+  }
+]

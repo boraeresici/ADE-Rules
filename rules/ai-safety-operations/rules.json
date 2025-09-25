@@ -1,0 +1,122 @@
+[
+  {
+    "id": "guardrails",
+    "name": "AI Guardrails",
+    "description": "Implement mechanisms to prevent AI models from generating harmful, biased, or out-of-policy content, including sensitive data blocking and red-teaming.",
+    "documentation": "guardrails.md",
+    "tags": ["ai-safety", "guardrails", "security", "ethics"],
+    "severity": "critical",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["content-filtering", "red-teaming", "ci-cd-check"],
+    "suggested_tools": ["DLP solutions", "prompt red-teaming tools"],
+    "related_rules": ["data-privacy", "algorithmic-bias", "never-trust-user-input"]
+  },
+  {
+    "id": "human-in-the-loop",
+    "name": "Human-in-the-Loop for AI Decisions",
+    "description": "Define thresholds and processes for human review and intervention in AI-driven decisions, especially for high-risk actions or low-confidence outputs.",
+    "documentation": "human-in-the-loop.md",
+    "tags": ["ai-safety", "human-oversight", "decision-making", "risk-management"],
+    "severity": "critical",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["workflow-automation", "manual-review"],
+    "suggested_tools": ["workflow management systems", "audit logging tools"],
+    "related_rules": ["guardrails", "incident-path", "ethical-software-development"]
+  },
+  {
+    "id": "feedback-capture",
+    "name": "AI Feedback Capture",
+    "description": "Implement mechanisms for capturing user feedback, raw prompts/outputs, and telemetry to continuously improve AI model performance and safety.",
+    "documentation": "feedback-capture.md",
+    "tags": ["ai-safety", "feedback", "telemetry", "continuous-improvement"],
+    "severity": "high",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["ui-integration", "analytics-pipeline"],
+    "suggested_tools": ["feedback forms", "analytics platforms"],
+    "related_rules": ["monitoring-observability-ai", "development-process-improvements", "metrics-implementation", "logging-best-practices"]
+  },
+  {
+    "id": "shadow-evals",
+    "name": "AI Shadow Evaluations",
+    "description": "Conduct shadow evaluations comparing new AI models against baselines using a golden dataset to track accuracy, latency, and regressions before deployment.",
+    "documentation": "shadow-evals.md",
+    "tags": ["ai-safety", "model-evaluation", "ci-cd", "quality-assurance"],
+    "severity": "critical",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["ci-cd-integration", "automated-testing"],
+    "suggested_tools": ["MLflow", "DVC", "CI/CD platforms"],
+    "related_rules": ["model-lifecycle-management", "comprehensive-multi-layered-testing", "metrics-implementation"]
+  },
+  {
+    "id": "cost-per-task",
+    "name": "AI Cost per Task Monitoring",
+    "description": "Measure and monitor the unit cost of AI tasks (inference, retrieval, orchestration) against baselines, and set alerts for significant cost increases.",
+    "documentation": "cost-per-task.md",
+    "tags": ["ai-operations", "cost-management", "observability", "finops"],
+    "severity": "high",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["telemetry-collection", "alerting"],
+    "suggested_tools": ["cloud cost management tools", "Prometheus", "Grafana"],
+    "related_rules": ["monitoring-observability-ai", "performance-monitoring", "metrics-implementation", "alerting-strategy"]
+  },
+  {
+    "id": "incident-path",
+    "name": "AI Incident Management",
+    "description": "Define clear incident response procedures, roles (incident commander), reporting channels, and SLAs for AI system failures.",
+    "documentation": "incident-path.md",
+    "tags": ["ai-operations", "incident-response", "devops", "reliability"],
+    "severity": "critical",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["alerting", "communication-tools"],
+    "suggested_tools": ["PagerDuty", "Opsgenie", "Slack", "Jira"],
+    "related_rules": ["alerting-strategy", "rollback-plan", "comprehensive-monitoring-logging"]
+  },
+  {
+    "id": "rollback-plan",
+    "name": "AI Rollback Plan",
+    "description": "Define and test a one-command or toggle rollback mechanism to a previous safe state for AI systems, avoiding ad-hoc fixes during live incidents.",
+    "documentation": "rollback-plan.md",
+    "tags": ["ai-operations", "deployment", "reliability", "ci-cd"],
+    "severity": "critical",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["ci-cd-integration", "deployment-automation"],
+    "suggested_tools": ["CI/CD platforms", "version control systems"],
+    "related_rules": ["incident-path", "automate-deployments-ci-cd"]
+  },
+  {
+    "id": "auditability-compliance",
+    "name": "AI Auditability and Compliance",
+    "description": "Ensure full audit trails for AI systems (prompt, output, decision logs) and compliance with relevant regulations (GDPR, HIPAA, ISO).",
+    "documentation": "auditability-compliance.md",
+    "tags": ["ai-safety", "compliance", "audit", "security", "ethics"],
+    "severity": "critical",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["logging", "data-governance-tools"],
+    "suggested_tools": ["SIEM systems", "data governance platforms"],
+    "related_rules": ["data-privacy", "secure-logging-monitoring", "ethical-software-development"]
+  },
+  {
+    "id": "model-lifecycle-management",
+    "name": "AI Model Lifecycle Management",
+    "description": "Manage the lifecycle of AI models, including versioning, release notes, planned deprecation, and automated evaluation in CI/CD pipelines.",
+    "documentation": "model-lifecycle-management.md",
+    "tags": ["ai-operations", "mlops", "ci-cd", "model-management"],
+    "severity": "high",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["ci-cd-integration", "model-registry"],
+    "suggested_tools": ["MLflow", "DVC", "Kubeflow", "CI/CD platforms"],
+    "related_rules": ["shadow-evals", "automate-deployments-ci-cd", "version-control"]
+  },
+  {
+    "id": "monitoring-observability-ai",
+    "name": "AI Monitoring and Observability",
+    "description": "Implement comprehensive monitoring and observability for AI systems, tracking metrics like latency, throughput, error rate, and data/concept drift.",
+    "documentation": "monitoring-observability-ai.md",
+    "tags": ["ai-operations", "observability", "monitoring", "mlops"],
+    "severity": "high",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["telemetry-collection", "alerting", "dashboarding"],
+    "suggested_tools": ["Prometheus", "Grafana", "Datadog", "MLflow"],
+    "related_rules": ["feedback-capture", "cost-per-task", "observability-best-practices", "metrics-implementation", "logging-best-practices"]
+  }
+]

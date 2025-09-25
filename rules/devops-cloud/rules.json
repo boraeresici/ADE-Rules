@@ -1,0 +1,62 @@
+[
+  {
+    "id": "infrastructure-as-code",
+    "name": "Infrastructure as Code (IaC)",
+    "description": "All cloud infrastructure should be defined and managed as code using tools like Terraform, AWS CloudFormation, or Azure Resource Manager.",
+    "documentation": "infrastructure-as-code.md",
+    "tags": ["devops", "iac", "cloud", "automation"],
+    "severity": "critical",
+    "applies_to": ["devops", "cloud", "backend"],
+    "automation_potential": ["ci-cd-check", "static-analysis", "code-review"],
+    "suggested_tools": ["Terraform", "AWS CloudFormation", "Azure Resource Manager"],
+    "related_rules": ["automate-deployments-ci-cd", "containerize-applications"]
+  },
+  {
+    "id": "containerize-applications",
+    "name": "Containerize Applications",
+    "description": "All applications should be containerized using Docker, with images optimized for size and security.",
+    "documentation": "containerize-applications.md",
+    "tags": ["devops", "containers", "docker", "microservices"],
+    "severity": "high",
+    "applies_to": ["devops", "backend", "frontend"],
+    "automation_potential": ["ci-cd-check", "static-analysis"],
+    "suggested_tools": ["Docker", "Hadolint", "Trivy"],
+    "related_rules": ["infrastructure-as-code", "automate-deployments-ci-cd"]
+  },
+  {
+    "id": "automate-deployments-ci-cd",
+    "name": "Automate Deployments with CI/CD",
+    "description": "Implement a fully automated CI/CD pipeline for building, testing, and deploying applications, with organized, reusable, and secure workflows.",
+    "documentation": "automate-deployments-ci-cd.md",
+    "tags": ["devops", "ci-cd", "automation", "deployment"],
+    "severity": "critical",
+    "applies_to": ["devops", "all"],
+    "automation_potential": ["ci-cd-check", "code-review"],
+    "suggested_tools": ["GitHub Actions", "GitLab CI", "Jenkins", "Azure DevOps"],
+    "related_rules": ["infrastructure-as-code", "containerize-applications"]
+  },
+  {
+    ""id": "managed-serverless-services",
+    "name": "Use Managed and Serverless Services",
+    "description": "Prefer managed and serverless cloud services over self-hosting to reduce operational overhead and improve reliability.",
+    "documentation": "managed-serverless-services.md",
+    "tags": ["cloud", "serverless", "managed-services", "aws", "gcp", "azure"],
+    "severity": "high",
+    "applies_to": ["devops", "cloud", "backend", "frontend"],
+    "automation_potential": ["iac", "ci-cd-check"],
+    "suggested_tools": ["AWS Fargate", "Google Cloud Run", "AWS RDS", "Azure Cosmos DB"],
+    "related_rules": ["infrastructure-as-code", "system-scalability"]
+  },
+  {
+    "id": "comprehensive-monitoring-logging",
+    "name": "Implement Comprehensive Monitoring and Logging",
+    "description": "Integrate logging and monitoring tools to gain visibility into application performance and health, and create disaster recovery plans.",
+    "documentation": "comprehensive-monitoring-logging.md",
+    "tags": ["devops", "monitoring", "logging", "observability"],
+    "severity": "critical",
+    "applies_to": ["devops", "all"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["Prometheus", "Grafana", "ELK Stack", "Datadog"],
+    "related_rules": ["observability-best-practices", "alerting-strategy"]
+  }
+]

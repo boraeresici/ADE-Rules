@@ -1,0 +1,50 @@
+[
+  {
+    "id": "restful-api",
+    "name": "RESTful API Design",
+    "description": "Principles and best practices for designing RESTful APIs using resource-oriented URLs, proper HTTP methods, and versioning.",
+    "documentation": "restful-api.md",
+    "tags": ["api", "rest", "http"],
+    "severity": "high",
+    "applies_to": ["backend", "api"],
+    "automation_potential": ["api-testing", "openapi-validation", "code-review"],
+    "suggested_tools": ["Postman", "Swagger UI", "OpenAPI linters"],
+    "related_rules": ["graphql", "grpc", "api-selection-process"]
+  },
+  {
+    "id": "graphql",
+    "name": "GraphQL API Design",
+    "description": "Guidelines for designing GraphQL APIs, focusing on client-driven queries, a strong type system, and avoiding over-fetching.",
+    "documentation": "graphql.md",
+    "tags": ["api", "graphql", "schema"],
+    "severity": "high",
+    "applies_to": ["backend", "frontend", "api"],
+    "automation_potential": ["graphql-validation", "code-review"],
+    "suggested_tools": ["Apollo Server", "GraphQL Playground", "GraphQL Code Generator"],
+    "related_rules": ["restful-api", "grpc", "api-selection-process"]
+  },
+  {
+    "id": "grpc",
+    "name": "gRPC Design",
+    "description": "Best practices for designing high-performance, low-latency APIs using gRPC, Protocol Buffers, and HTTP/2 streaming.",
+    "documentation": "grpc.md",
+    "tags": ["api", "grpc", "rpc", "protobuf"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices", "api"],
+    "automation_potential": ["code-generation", "code-review"],
+    "suggested_tools": ["Protocol Buffers compiler", "gRPC frameworks"],
+    "related_rules": ["restful-api", "graphql", "api-selection-process"]
+  },
+  {
+    "id": "api-selection-process",
+    "name": "API Selection and Design Process",
+    "description": "A step-by-step process for selecting the right API type (REST, GraphQL, gRPC) and designing it based on project requirements.",
+    "documentation": "api-selection-process.md",
+    "tags": ["api", "design-process", "architecture"],
+    "severity": "high",
+    "applies_to": ["architecture", "api-design"],
+    "automation_potential": ["manual-review"],
+    "suggested_tools": ["Architecture Decision Records (ADR)"],
+    "related_rules": ["restful-api", "graphql", "grpc"]
+  }
+]

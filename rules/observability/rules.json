@@ -1,0 +1,98 @@
+[
+  {
+    "id": "code-quality-analysis",
+    "name": "Code Quality and Analysis",
+    "description": "Guidelines for regularly measuring code quality, using static analysis tools, and identifying performance bottlenecks.",
+    "documentation": "code-quality-analysis.md",
+    "tags": ["observability", "code-quality", "static-analysis"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube", "ESLint", "Pylint"],
+    "related_rules": ["logging-best-practices", "metrics-implementation"]
+  },
+  {
+    "id": "logging-best-practices",
+    "name": "Logging Best Practices",
+    "description": "Guidelines for structured and contextual logging, including correlation IDs and appropriate log levels.",
+    "documentation": "logging-best-practices.md",
+    "tags": ["observability", "logging", "best-practices"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "code-review"],
+    "suggested_tools": ["ELK Stack", "Splunk", "Datadog", "Winston", "Log4j"],
+    "related_rules": ["metrics-implementation", "distributed-tracing", "alerting-strategy"]
+  },
+  {
+    "id": "metrics-implementation",
+    "name": "Metrics Implementation",
+    "description": "Guidelines for implementing and visualizing metrics, including the Four Golden Signals and custom business metrics.",
+    "documentation": "metrics-implementation.md",
+    "tags": ["observability", "metrics", "monitoring"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["Prometheus", "Grafana", "Datadog"],
+    "related_rules": ["logging-best-practices", "distributed-tracing", "alerting-strategy"]
+  },
+  {
+    "id": "distributed-tracing",
+    "name": "Distributed Tracing",
+    "description": "Guidelines for implementing end-to-end visibility into requests using OpenTelemetry for complex microservices architectures.",
+    "documentation": "distributed-tracing.md",
+    "tags": ["observability", "tracing", "opentelemetry"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["OpenTelemetry", "Jaeger", "Zipkin"],
+    "related_rules": ["logging-best-practices", "metrics-implementation", "alerting-strategy"]
+  },
+  {
+    "id": "alerting-strategy",
+    "name": "Alerting Strategy",
+    "description": "Guidelines for effective alerting, focusing on symptoms, clear escalation policies, and avoiding alert fatigue.",
+    "documentation": "alerting-strategy.md",
+    "tags": ["observability", "alerting", "incident-response"],
+    "severity": "critical",
+    "applies_to": ["devops", "all"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["PagerDuty", "Opsgenie", "Prometheus Alertmanager"],
+    "related_rules": ["logging-best-practices", "metrics-implementation", "performance-monitoring"]
+  },
+  {
+    "id": "performance-monitoring",
+    "name": "Performance Monitoring",
+    "description": "Guidelines for comprehensive performance monitoring, including APM, RUM, and synthetic monitoring.",
+    "documentation": "performance-monitoring.md",
+    "tags": ["observability", "performance", "monitoring"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["New Relic", "Dynatrace", "Datadog", "Lighthouse"],
+    "related_rules": ["metrics-implementation", "alerting-strategy", "system-scalability"]
+  },
+  {
+    "id": "development-process-improvements",
+    "name": "Development Process Improvements",
+    "description": "Guidelines for fostering continuous improvement in development processes, including user feedback and technical debt management.",
+    "documentation": "development-process-improvements.md",
+    "tags": ["observability", "continuous-improvement", "dev-process"],
+    "severity": "medium",
+    "applies_to": ["project-management", "all"],
+    "automation_potential": ["tool-integration", "manual-review"],
+    "suggested_tools": ["Jira", "Confluence", "CI/CD platforms"],
+    "related_rules": ["observability-best-practices", "quality-assurance"]
+  },
+  {
+    "id": "observability-best-practices",
+    "name": "Observability Best Practices",
+    "description": "Overarching practices to ensure observability is a first-class citizen in the development lifecycle.",
+    "documentation": "observability-best-practices.md",
+    "tags": ["observability", "best-practices"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "code-review"],
+    "suggested_tools": ["Prometheus", "Grafana", "ELK Stack", "OpenTelemetry"],
+    "related_rules": ["logging-best-practices", "metrics-implementation", "distributed-tracing", "alerting-strategy", "performance-monitoring"]
+  }
+]

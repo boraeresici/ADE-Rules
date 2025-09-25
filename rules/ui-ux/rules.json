@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ui-ux-fundamentals",
+    "name": "UI/UX Fundamentals",
+    "description": "Core focus areas and structured approach for modern UI/UX design and development, emphasizing user-centricity and performance.",
+    "documentation": "ui-ux-fundamentals.md",
+    "tags": ["ui-ux", "design", "development", "fundamentals"],
+    "severity": "high",
+    "applies_to": ["frontend", "ui-ux"],
+    "automation_potential": ["manual-review"],
+    "suggested_tools": ["Figma", "Sketch", "Adobe XD"],
+    "related_rules": ["design-principles", "component-architecture-react"]
+  },
+  {
+    "id": "design-principles",
+    "name": "UI/UX Design Principles",
+    "description": "Guidelines for creating consistent, responsive, accessible, and user-centered designs, ensuring intuitive and enjoyable user experiences.",
+    "documentation": "design-principles.md",
+    "tags": ["ui-ux", "design", "accessibility", "usability"],
+    "severity": "high",
+    "applies_to": ["frontend", "ui-ux"],
+    "automation_potential": ["manual-review", "accessibility-check"],
+    "suggested_tools": ["Figma", "Sketch", "Adobe XD", "Lighthouse", "axe DevTools"],
+    "related_rules": ["ui-ux-fundamentals", "component-architecture-react"]
+  },
+  {
+    "id": "component-architecture-react",
+    "name": "React Component Architecture",
+    "description": "Best practices for designing reusable, testable, and maintainable React components with TypeScript, including output definitions and examples.",
+    "documentation": "component-architecture-react.md",
+    "tags": ["react", "component-architecture", "typescript", "ui"],
+    "severity": "high",
+    "applies_to": ["frontend", "react", "ui-ux"],
+    "automation_potential": ["linter", "static-analysis", "code-review"],
+    "suggested_tools": ["ESLint-plugin-react", "React Testing Library", "Storybook"],
+    "related_rules": ["ui-ux-fundamentals", "design-principles", "state-management"]
+  },
+  {
+    "id": "state-management",
+    "name": "State Management in UI/UX",
+    "description": "Guidelines for effective state management in frontend applications, from local component state to global state libraries.",
+    "documentation": "state-management.md",
+    "tags": ["state-management", "react", "vue", "angular", "ui"],
+    "severity": "high",
+    "applies_to": ["frontend", "ui-ux"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Redux DevTools", "Zustand DevTools"],
+    "related_rules": ["component-architecture-react", "performance-optimization"]
+  },
+  {
+    "id": "performance-optimization",
+    "name": "Frontend Performance Optimization",
+    "description": "Techniques for optimizing frontend performance, including memoization, lazy loading, and code splitting.",
+    "documentation": "performance-optimization.md",
+    "tags": ["performance", "frontend", "optimization", "ui"],
+    "severity": "high",
+    "applies_to": ["frontend", "ui-ux"],
+    "automation_potential": ["performance-audit", "ci-cd-check", "code-review"],
+    "suggested_tools": ["Lighthouse", "Chrome DevTools Profiler", "Webpack Bundle Analyzer"],
+    "related_rules": ["ui-ux-fundamentals", "component-architecture-react", "state-management"]
+  },
+  {
+    "id": "component-patterns",
+    "name": "UI Component Patterns",
+    "description": "Design patterns for creating reusable, flexible, and maintainable UI components.",
+    "documentation": "component-patterns.md",
+    "tags": ["component-patterns", "design-patterns", "ui"],
+    "severity": "medium",
+    "applies_to": ["frontend", "ui-ux"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Storybook"],
+    "related_rules": ["component-architecture-react", "design-principles"]
+  },
+  {
+    "id": "user-experience-improvement",
+    "name": "User Experience Improvement",
+    "description": "Strategies for continuously improving user experience through feedback, A/B testing, and performance optimization.",
+    "documentation": "user-experience-improvement.md",
+    "tags": ["user-experience", "ux", "feedback", "ab-testing"],
+    "severity": "high",
+    "applies_to": ["frontend", "ui-ux", "product-management"],
+    "automation_potential": ["ab-testing-tools", "analytics-tools", "manual-review"],
+    "suggested_tools": ["Google Analytics", "Hotjar", "Optimizely"],
+    "related_rules": ["design-principles", "performance-optimization"]
+  },
+  {
+    "id": "ui-ux-best-practices",
+    "name": "UI/UX Best Practices",
+    "description": "Specific best practices for high-quality, accessible, and maintainable frontend code, addressing common pitfalls.",
+    "documentation": "ui-ux-best-practices.md",
+    "tags": ["ui-ux", "best-practices", "accessibility", "maintainability"],
+    "severity": "high",
+    "applies_to": ["frontend", "ui-ux"],
+    "automation_potential": ["linter", "accessibility-check", "code-review"],
+    "suggested_tools": ["ESLint", "axe DevTools", "Lighthouse"],
+    "related_rules": ["ui-ux-fundamentals", "design-principles", "component-architecture-react"]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "initial-steps",
+    "name": "Debugging Initial Steps",
+    "description": "First steps to take when encountering a software defect, focusing on error capture and reproduction.",
+    "documentation": "initial-steps.md",
+    "tags": ["debugging", "troubleshooting", "errors"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "manual-review"],
+    "suggested_tools": ["IDE debuggers", "logging frameworks"],
+    "related_rules": ["debugging-process", "reporting", "debugging-best-practices"]
+  },
+  {
+    "id": "debugging-process",
+    "name": "Debugging Process",
+    "description": "A systematic approach to identifying, isolating, and resolving software defects through analysis and experimentation.",
+    "documentation": "debugging-process.md",
+    "tags": ["debugging", "process", "logs"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "manual-review"],
+    "suggested_tools": ["IDE debuggers", "logging frameworks", "APM tools"],
+    "related_rules": ["initial-steps", "reporting", "debugging-best-practices"]
+  },
+  {
+    "id": "reporting",
+    "name": "Debugging Reporting",
+    "description": "Guidelines for creating clear and comprehensive bug reports, including root cause, evidence, and prevention recommendations.",
+    "documentation": "reporting.md",
+    "tags": ["debugging", "reporting", "bug-reports"],
+    "severity": "medium",
+    "applies_to": ["project-management", "all"],
+    "automation_potential": ["tool-integration", "manual-review"],
+    "suggested_tools": ["Jira", "GitHub Issues", "Confluence"],
+    "related_rules": ["initial-steps", "debugging-process", "debugging-best-practices"]
+  },
+  {
+    "id": "debugging-best-practices",
+    "name": "Debugging Best Practices",
+    "description": "General best practices for enhancing debugging efficiency and effectiveness, including systematic approach and collaboration.",
+    "documentation": "debugging-best-practices.md",
+    "tags": ["debugging", "best-practices", "collaboration"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "manual-review"],
+    "suggested_tools": ["IDE debuggers", "logging frameworks", "APM tools"],
+    "related_rules": ["initial-steps", "debugging-process", "reporting"]
+  }
+]

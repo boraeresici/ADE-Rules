@@ -1,0 +1,74 @@
+[
+  {
+    "id": "never-trust-user-input",
+    "name": "Never Trust User Input",
+    "description": "Treat all input from users or external systems as untrusted and validate/sanitize to prevent injection attacks.",
+    "documentation": "never-trust-user-input.md",
+    "tags": ["security", "input-validation", "xss", "sqli"],
+    "severity": "critical",
+    "applies_to": ["all"],
+    "automation_potential": ["linter", "sast", "dast", "code-review"],
+    "suggested_tools": ["OWASP ESAPI", "DOMPurify", "SAST tools"],
+    "related_rules": ["least-privilege", "automate-vulnerability-management"]
+  },
+  {
+    "id": "least-privilege",
+    "name": "Enforce the Principle of Least Privilege",
+    "description": "Every user, service, or process should only have the minimum permissions necessary to perform its function.",
+    "documentation": "least-privilege.md",
+    "tags": ["security", "access-control", "rbac"],
+    "severity": "critical",
+    "applies_to": ["all"],
+    "automation_potential": ["iac", "code-review"],
+    "suggested_tools": ["IAM policies", "RBAC systems"],
+    "related_rules": ["never-trust-user-input", "secure-config-secrets"]
+  },
+  {
+    "id": "strong-auth-crypto",
+    "name": "Use Strong Authentication and Cryptography",
+    "description": "Implement strong authentication mechanisms and encrypt all sensitive data using strong, modern algorithms.",
+    "documentation": "strong-auth-crypto.md",
+    "tags": ["security", "authentication", "cryptography", "mfa"],
+    "severity": "critical",
+    "applies_to": ["all"],
+    "automation_potential": ["sast", "code-review"],
+    "suggested_tools": ["OWASP ZAP", "SAST tools", "cryptography libraries"],
+    "related_rules": ["secure-config-secrets", "automate-vulnerability-management"]
+  },
+  {
+    "id": "automate-vulnerability-management",
+    "name": "Automate Vulnerability Management",
+    "description": "Integrate automated security scanning (SCA, SAST, DAST) into the CI/CD pipeline to catch defects early.",
+    "documentation": "automate-vulnerability-management.md",
+    "tags": ["security", "vulnerability-management", "sast", "dast", "sca"],
+    "severity": "critical",
+    "applies_to": ["devops", "all"],
+    "automation_potential": ["ci-cd-check", "sast", "dast", "sca"],
+    "suggested_tools": ["Snyk", "Dependabot", "OWASP ZAP", "SAST tools"],
+    "related_rules": ["secure-config-secrets", "strong-auth-crypto"]
+  },
+  {
+    "id": "secure-config-secrets",
+    "name": "Secure Configuration and Secrets Management",
+    "description": "Avoid security misconfigurations and never store secrets in source code; use a dedicated secrets management service.",
+    "documentation": "secure-config-secrets.md",
+    "tags": ["security", "configuration", "secrets-management"],
+    "severity": "critical",
+    "applies_to": ["all"],
+    "automation_potential": ["ci-cd-check", "static-analysis", "iac"],
+    "suggested_tools": ["AWS Secrets Manager", "Azure Key Vault", "HashiCorp Vault", "SAST tools"],
+    "related_rules": ["least-privilege", "strong-auth-crypto"]
+  },
+  {
+    "id": "secure-logging-monitoring",
+    "name": "Implement Secure Logging and Monitoring",
+    "description": "Log all security-relevant events, centralize logs, and monitor for suspicious activity to enable incident response.",
+    "documentation": "secure-logging-monitoring.md",
+    "tags": ["security", "logging", "monitoring", "observability"],
+    "severity": "critical",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["SIEM systems", "ELK Stack", "Splunk"],
+    "related_rules": ["automate-vulnerability-management", "observability-best-practices"]
+  }
+]

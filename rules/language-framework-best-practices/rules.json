@@ -1,0 +1,74 @@
+[
+  {
+    "id": "python-django",
+    "name": "Python and Django Best Practices",
+    "description": "Guidelines for writing idiomatic, efficient, and maintainable Python code within the Django framework.",
+    "documentation": "python-django.md",
+    "tags": ["python", "django", "backend", "web"],
+    "severity": "high",
+    "applies_to": ["python", "django", "backend"],
+    "automation_potential": ["linter", "static-analysis", "code-review"],
+    "suggested_tools": ["Flake8", "Pylint", "Django check", "pytest-django"],
+    "related_rules": ["javascript-typescript", "go", "fastapi", "general-principles"]
+  },
+  {
+    "id": "javascript-typescript",
+    "name": "JavaScript/TypeScript Best Practices",
+    "description": "Guidelines for writing robust, type-safe, and maintainable JavaScript and TypeScript code.",
+    "documentation": "javascript-typescript.md",
+    "tags": ["javascript", "typescript", "frontend", "backend"],
+    "severity": "high",
+    "applies_to": ["javascript", "typescript", "frontend", "backend"],
+    "automation_potential": ["linter", "type-checker", "static-analysis", "code-review"],
+    "suggested_tools": ["ESLint", "Prettier", "TypeScript compiler"],
+    "related_rules": ["python-django", "go", "fastapi", "general-principles"]
+  },
+  {
+    "id": "go",
+    "name": "Go Best Practices",
+    "description": "Guidelines for writing idiomatic, concurrent, and robust applications in Go.",
+    "documentation": "go.md",
+    "tags": ["go", "backend", "concurrency"],
+    "severity": "high",
+    "applies_to": ["go", "backend"],
+    "automation_potential": ["linter", "static-analysis", "code-review"],
+    "suggested_tools": ["go vet", "golint", "staticcheck"],
+    "related_rules": ["python-django", "javascript-typescript", "fastapi", "general-principles"]
+  },
+  {
+    "id": "react-specific",
+    "name": "React Specific Best Practices",
+    "description": "Guidelines for optimizing React component performance, organization, and reusability.",
+    "documentation": "react-specific.md",
+    "tags": ["react", "frontend", "performance"],
+    "severity": "high",
+    "applies_to": ["react", "frontend"],
+    "automation_potential": ["linter", "static-analysis", "code-review"],
+    "suggested_tools": ["ESLint-plugin-react", "React DevTools Profiler"],
+    "related_rules": ["react", "general-frontend-best-practices"]
+  },
+  {
+    "id": "fastapi",
+    "name": "FastAPI Best Practices",
+    "description": "Guidelines for building reliable, testable, and high-performance APIs with FastAPI.",
+    "documentation": "fastapi.md",
+    "tags": ["fastapi", "python", "backend", "api"],
+    "severity": "high",
+    "applies_to": ["fastapi", "python", "backend", "api"],
+    "automation_potential": ["linter", "static-analysis", "code-review", "api-testing"],
+    "suggested_tools": ["Pydantic", "FastAPI CLI", "pytest"],
+    "related_rules": ["python-django", "api-design", "general-principles"]
+  },
+  {
+    "id": "general-principles",
+    "name": "General Language and Framework Principles",
+    "description": "Overarching best practices applicable across various programming languages and frameworks.",
+    "documentation": "general-principles.md",
+    "tags": ["best-practices", "general", "coding-standards"],
+    "severity": "medium",
+    "applies_to": ["all"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": [],
+    "related_rules": ["python-django", "javascript-typescript", "go", "react-specific", "fastapi"]
+  }
+]

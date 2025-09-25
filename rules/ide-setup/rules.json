@@ -1,0 +1,38 @@
+[
+  {
+    "id": "vscode-extensions",
+    "name": "VS Code Extensions",
+    "description": "Recommended VS Code extensions to enhance code quality, readability, and developer productivity.",
+    "documentation": "vscode-extensions.md",
+    "tags": ["ide-setup", "vscode", "extensions"],
+    "severity": "medium",
+    "applies_to": ["ide-setup", "vscode"],
+    "automation_potential": ["tool-integration", "manual-setup"],
+    "suggested_tools": ["VS Code"],
+    "related_rules": ["vscode-settings", "jetbrains-setup"]
+  },
+  {
+    "id": "vscode-settings",
+    "name": "VS Code settings.json Configuration",
+    "description": "Recommended settings for VS Code's settings.json to ensure consistent code formatting and linting.",
+    "documentation": "vscode-settings.md",
+    "tags": ["ide-setup", "vscode", "configuration"],
+    "severity": "medium",
+    "applies_to": ["ide-setup", "vscode"],
+    "automation_potential": ["tool-integration", "manual-setup"],
+    "suggested_tools": ["VS Code"],
+    "related_rules": ["vscode-extensions", "jetbrains-setup"]
+  },
+  {
+    "id": "jetbrains-setup",
+    "name": "JetBrains IDE Setup",
+    "description": "Recommendations for configuring JetBrains IDEs to optimize developer workflow and enforce coding standards.",
+    "documentation": "jetbrains-setup.md",
+    "tags": ["ide-setup", "jetbrains", "configuration"],
+    "severity": "medium",
+    "applies_to": ["ide-setup", "jetbrains"],
+    "automation_potential": ["tool-integration", "manual-setup"],
+    "suggested_tools": ["JetBrains IDEs"],
+    "related_rules": ["vscode-extensions", "vscode-settings"]
+  }
+]

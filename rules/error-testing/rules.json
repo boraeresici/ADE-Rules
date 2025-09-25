@@ -1,0 +1,50 @@
+[
+  {
+    "id": "principled-error-handling",
+    "name": "Principled Error Handling",
+    "description": "Errors should be handled gracefully and explicitly. Never silently swallow errors.",
+    "documentation": "principled-error-handling.md",
+    "tags": ["error-handling", "resilience", "logging"],
+    "severity": "critical",
+    "applies_to": ["all"],
+    "automation_potential": ["linter", "code-review"],
+    "suggested_tools": ["ESLint", "Pylint", "SonarQube"],
+    "related_rules": ["semantic-custom-error-types", "resilient-recovery-strategies"]
+  },
+  {
+    "id": "semantic-custom-error-types",
+    "name": "Semantic and Custom Error Types",
+    "description": "Define and use custom error types to convey semantic meaning for precise programmatic responses.",
+    "documentation": "semantic-custom-error-types.md",
+    "tags": ["error-handling", "types", "custom-errors"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["linter", "type-checker", "code-review"],
+    "suggested_tools": ["TypeScript", "ESLint", "Pylint"],
+    "related_rules": ["principled-error-handling"]
+  },
+  {
+    "id": "resilient-recovery-strategies",
+    "name": "Resilient Recovery Strategies",
+    "description": "Implement strategies like retry logic and circuit breaker patterns to recover from transient failures in distributed systems.",
+    "documentation": "resilient-recovery-strategies.md",
+    "tags": ["error-handling", "resilience", "circuit-breaker", "retry"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices"],
+    "automation_potential": ["library-integration", "code-review"],
+    "suggested_tools": ["resilience4j", "axios-retry"],
+    "related_rules": ["principled-error-handling", "distributed-tracing"]
+  },
+  {
+    "id": "comprehensive-multi-layered-testing",
+    "name": "Comprehensive and Multi-Layered Testing",
+    "description": "Adopt a comprehensive testing strategy including unit, integration, and E2E tests, with high test coverage and error scenario testing.",
+    "documentation": "comprehensive-multi-layered-testing.md",
+    "tags": ["testing", "unit-tests", "integration-tests", "e2e-tests", "tdd"],
+    "severity": "critical",
+    "applies_to": ["all"],
+    "automation_potential": ["ci-cd-check", "test-runner", "code-review"],
+    "suggested_tools": ["Jest", "Pytest", "JUnit", "Cypress", "Selenium"],
+    "related_rules": ["principled-error-handling", "code-quality-analysis"]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "backend-fundamentals",
+    "name": "Backend Fundamentals",
+    "description": "Core focus areas and structured approach for designing and implementing robust, scalable, and secure backend architectures.",
+    "documentation": "backend-fundamentals.md",
+    "tags": ["backend", "architecture", "fundamentals"],
+    "severity": "high",
+    "applies_to": ["backend", "architecture"],
+    "automation_potential": ["manual-review"],
+    "suggested_tools": [],
+    "related_rules": ["restful-api-design", "service-architecture", "database-design"]
+  },
+  {
+    "id": "restful-api-design",
+    "name": "RESTful API Design",
+    "description": "Guidelines for designing intuitive, consistent, and efficient RESTful APIs with proper HTTP methods, naming, and versioning.",
+    "documentation": "restful-api-design.md",
+    "tags": ["backend", "api", "rest", "design"],
+    "severity": "high",
+    "applies_to": ["backend", "api"],
+    "automation_potential": ["api-testing", "openapi-validation", "code-review"],
+    "suggested_tools": ["Postman", "Swagger UI", "OpenAPI linters"],
+    "related_rules": ["backend-fundamentals", "service-architecture", "api-design"]
+  },
+  {
+    "id": "service-architecture",
+    "name": "Backend Service Architecture",
+    "description": "Guidelines for choosing between microservice and monolithic architectures, inter-service communication, and fault tolerance, including output definitions.",
+    "documentation": "service-architecture.md",
+    "tags": ["backend", "architecture", "microservices", "monolith"],
+    "severity": "high",
+    "applies_to": ["backend", "architecture", "microservices"],
+    "automation_potential": ["tool-integration", "code-review"],
+    "suggested_tools": ["Kubernetes", "Istio", "Linkerd"],
+    "related_rules": ["backend-fundamentals", "restful-api-design", "database-design"]
+  },
+  {
+    "id": "database-design",
+    "name": "Database Design",
+    "description": "Best practices for choosing database types, schema normalization, indexing, and sharding for performance and scalability.",
+    "documentation": "database-design.md",
+    "tags": ["backend", "database", "sql", "nosql"],
+    "severity": "high",
+    "applies_to": ["backend", "database"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["ORM tools", "Database performance monitors"],
+    "related_rules": ["backend-fundamentals", "performance-optimization"]
+  },
+  {
+    "id": "performance-optimization",
+    "name": "Backend Performance Optimization",
+    "description": "Techniques for optimizing backend performance through caching, asynchronous processing, and query optimization.",
+    "documentation": "performance-optimization.md",
+    "tags": ["backend", "performance", "optimization", "caching"],
+    "severity": "high",
+    "applies_to": ["backend", "performance"],
+    "automation_potential": ["profiling", "static-analysis", "code-review"],
+    "suggested_tools": ["APM tools", "profilers", "Redis", "Memcached"],
+    "related_rules": ["backend-fundamentals", "database-design", "caching-strategies"]
+  },
+  {
+    "id": "security",
+    "name": "Backend Security",
+    "description": "Essential security practices for protecting sensitive data and preventing unauthorized access in backend systems.",
+    "documentation": "security.md",
+    "tags": ["backend", "security", "authentication", "authorization"],
+    "severity": "critical",
+    "applies_to": ["backend", "security"],
+    "automation_potential": ["sast", "dast", "code-review"],
+    "suggested_tools": ["OWASP ZAP", "SAST tools", "WAFs"],
+    "related_rules": ["backend-fundamentals", "secure-config-secrets", "strong-auth-crypto"]
+  }
+]

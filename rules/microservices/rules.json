@@ -1,0 +1,74 @@
+[
+  {
+    "id": "defining-service-boundaries",
+    "name": "Defining Microservice Boundaries",
+    "description": "Guidelines for establishing clear and independent service boundaries using Domain-Driven Design principles.",
+    "documentation": "defining-service-boundaries.md",
+    "tags": ["microservices", "architecture", "ddd"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices", "architecture"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube"],
+    "related_rules": ["inter-service-communication", "data-consistency-strategies", "scalability-resilience"]
+  },
+  {
+    "id": "inter-service-communication",
+    "name": "Inter-Service Communication",
+    "description": "Guidelines for choosing appropriate communication patterns (REST, gRPC, message queues) and implementing API Gateways.",
+    "documentation": "inter-service-communication.md",
+    "tags": ["microservices", "communication", "api-gateway"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices", "architecture"],
+    "automation_potential": ["tool-integration", "code-review"],
+    "suggested_tools": ["Istio", "Linkerd", "RabbitMQ", "Apache Kafka"],
+    "related_rules": ["defining-service-boundaries", "data-consistency-strategies", "distributed-tracing"]
+  },
+  {
+    "id": "data-consistency-strategies",
+    "name": "Data Consistency Strategies",
+    "description": "Strategies for managing data consistency across multiple services, including Eventual Consistency, Saga, and CQRS patterns.",
+    "documentation": "data-consistency-strategies.md",
+    "tags": ["microservices", "data-consistency", "saga", "cqrs"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices", "architecture"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Event Sourcing libraries", "Distributed transaction frameworks"],
+    "related_rules": ["defining-service-boundaries", "inter-service-communication"]
+  },
+  {
+    "id": "distributed-tracing",
+    "name": "Distributed Tracing in Microservices",
+    "description": "Guidelines for implementing end-to-end visibility into requests across distributed systems using OpenTelemetry.",
+    "documentation": "distributed-tracing.md",
+    "tags": ["microservices", "observability", "tracing", "opentelemetry"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices", "observability"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["OpenTelemetry", "Jaeger", "Zipkin"],
+    "related_rules": ["inter-service-communication", "logging-best-practices", "metrics-implementation"]
+  },
+  {
+    "id": "scalability-resilience",
+    "name": "Microservice Scalability and Resilience",
+    "description": "Principles for designing independently scalable services and implementing resilience patterns like Circuit Breaker.",
+    "documentation": "scalability-resilience.md",
+    "tags": ["microservices", "scalability", "resilience", "circuit-breaker"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices", "architecture"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["Kubernetes", "Circuit Breaker libraries"],
+    "related_rules": ["defining-service-boundaries", "inter-service-communication", "system-scalability"]
+  },
+  {
+    "id": "microservices-best-practices",
+    "name": "Microservices Best Practices",
+    "description": "Overarching practices for streamlining microservice development, deployment, and operation.",
+    "documentation": "microservices-best-practices.md",
+    "tags": ["microservices", "best-practices", "ci-cd", "kubernetes"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices", "devops"],
+    "automation_potential": ["ci-cd-check", "code-review"],
+    "suggested_tools": ["Kubernetes", "CI/CD platforms"],
+    "related_rules": ["defining-service-boundaries", "inter-service-communication", "scalability-resilience"]
+  }
+]

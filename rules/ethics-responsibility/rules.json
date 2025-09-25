@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ethical-software-development",
+    "name": "Ethical Software Development",
+    "description": "Guidelines for building trust, protecting users, and ensuring technology serves the greater good through transparency, fairness, and accountability.",
+    "documentation": "ethical-software-development.md",
+    "tags": ["ethics", "responsibility", "transparency", "fairness"],
+    "severity": "critical",
+    "applies_to": ["all"],
+    "automation_potential": ["manual-review"],
+    "suggested_tools": ["Explainable AI tools"],
+    "related_rules": ["data-privacy", "algorithmic-bias", "sustainable-software-development"]
+  },
+  {
+    "id": "data-privacy",
+    "name": "Data Privacy",
+    "description": "Best practices for protecting user data privacy, including minimization, encryption, anonymization, and access control.",
+    "documentation": "data-privacy.md",
+    "tags": ["ethics", "data-privacy", "gdpr", "security"],
+    "severity": "critical",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "code-review"],
+    "suggested_tools": ["GDPR compliance tools", "CCPA compliance tools", "encryption libraries"],
+    "related_rules": ["ethical-software-development", "algorithmic-bias", "secure-config-secrets"]
+  },
+  {
+    "id": "algorithmic-bias",
+    "name": "Algorithmic Bias",
+    "description": "Guidelines for addressing algorithmic bias to build equitable and trustworthy AI systems through data diversity, audits, and human oversight.",
+    "documentation": "algorithmic-bias.md",
+    "tags": ["ethics", "ai", "bias", "fairness"],
+    "severity": "critical",
+    "applies_to": ["ai", "machine-learning", "all"],
+    "automation_potential": ["tool-integration", "manual-review"],
+    "suggested_tools": ["Fairness metrics libraries", "Explainable AI tools"],
+    "related_rules": ["ethical-software-development", "data-privacy"]
+  },
+  {
+    "id": "sustainable-software-development",
+    "name": "Sustainable Software Development",
+    "description": "Practices to reduce the environmental impact of software development through energy efficiency, resource optimization, and long-term design.",
+    "documentation": "sustainable-software-development.md",
+    "tags": ["ethics", "sustainability", "green-it", "environment"],
+    "severity": "medium",
+    "applies_to": ["all"],
+    "automation_potential": ["tool-integration", "manual-review"],
+    "suggested_tools": ["Cloud cost management tools", "performance monitoring"],
+    "related_rules": ["ethical-software-development", "performance-optimization"]
+  },
+  {
+    "id": "general-principles",
+    "name": "General Ethics and Responsibility Principles",
+    "description": "Overarching principles for fostering a culture of ethical awareness and responsible innovation within the development team and community.",
+    "documentation": "general-principles.md",
+    "tags": ["ethics", "responsibility", "culture", "community"],
+    "severity": "medium",
+    "applies_to": ["all"],
+    "automation_potential": ["manual-review"],
+    "suggested_tools": ["Training platforms", "Community management tools"],
+    "related_rules": ["ethical-software-development", "data-privacy", "algorithmic-bias", "sustainable-software-development"]
+  }
+]

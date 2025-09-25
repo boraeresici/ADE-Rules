@@ -1,0 +1,86 @@
+[
+  {
+    "id": "srp",
+    "name": "Single Responsibility Principle (SRP)",
+    "description": "Each class or function should have only one responsibility and one reason to change.",
+    "documentation": "srp.md",
+    "tags": ["solid", "design-principles", "reusability"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube", "ESLint", "Pylint"],
+    "related_rules": ["ocp", "lsp", "isp", "dip", "simplicity-kiss"]
+  },
+  {
+    "id": "ocp",
+    "name": "Open/Closed Principle (OCP)",
+    "description": "Code should be open for extension but closed for modification.",
+    "documentation": "ocp.md",
+    "tags": ["solid", "design-principles", "reusability"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube"],
+    "related_rules": ["srp", "lsp", "isp", "dip"]
+  },
+  {
+    "id": "lsp",
+    "name": "Liskov Substitution Principle (LSP)",
+    "description": "Subtypes must be substitutable for their base types without altering the correctness of the program.",
+    "documentation": "lsp.md",
+    "tags": ["solid", "design-principles", "reusability"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["type-checker", "static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube", "TypeScript compiler"],
+    "related_rules": ["srp", "ocp", "isp", "dip"]
+  },
+  {
+    "id": "isp",
+    "name": "Interface Segregation Principle (ISP)",
+    "description": "Interfaces should be client-specific, not general-purpose.",
+    "documentation": "isp.md",
+    "tags": ["solid", "design-principles", "reusability"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube"],
+    "related_rules": ["srp", "ocp", "lsp", "dip"]
+  },
+  {
+    "id": "dip",
+    "name": "Dependency Inversion Principle (DIP)",
+    "description": "High-level modules should depend on abstractions, not concrete implementations.",
+    "documentation": "dip.md",
+    "tags": ["solid", "design-principles", "reusability"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube", "Dependency Injection frameworks"],
+    "related_rules": ["srp", "ocp", "lsp", "isp"]
+  },
+  {
+    "id": "reusability",
+    "name": "Code Reusability",
+    "description": "Practices to enhance code reusability by extracting common logic and using dependency injection.",
+    "documentation": "reusability.md",
+    "tags": ["reusability", "design-patterns"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube", "IDE Refactoring Tools"],
+    "related_rules": ["srp", "maintainability"]
+  },
+  {
+    "id": "maintainability",
+    "name": "Code Maintainability",
+    "description": "Practices to ensure code is easy to understand, modify, and extend over its lifetime.",
+    "documentation": "maintainability.md",
+    "tags": ["maintainability", "refactoring", "code-quality"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube", "IDE Refactoring Tools"],
+    "related_rules": ["refactoring", "code-quality-analysis"]
+  }
+]

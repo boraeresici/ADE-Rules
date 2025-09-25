@@ -1,0 +1,110 @@
+[
+  {
+    "id": "performance-principles",
+    "name": "Performance Principles",
+    "description": "Fundamental guidelines for optimizing application performance, emphasizing measurement and critical path optimization.",
+    "documentation": "performance-principles.md",
+    "tags": ["performance", "optimization", "principles"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["profiling", "static-analysis", "code-review"],
+    "suggested_tools": ["Chrome DevTools", "Blackfire", "SonarQube"],
+    "related_rules": ["algorithmic-optimization", "memory-optimization", "asynchronous-performance"]
+  },
+  {
+    "id": "algorithmic-optimization",
+    "name": "Algorithmic Optimization",
+    "description": "Guidelines for improving performance by choosing efficient algorithms and data structures.",
+    "documentation": "algorithmic-optimization.md",
+    "tags": ["performance", "algorithms", "data-structures"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["static-analysis", "code-review"],
+    "suggested_tools": ["SonarQube", "profilers"],
+    "related_rules": ["performance-principles", "memory-optimization"]
+  },
+  {
+    "id": "memory-optimization",
+    "name": "Memory Optimization",
+    "description": "Techniques for efficient memory usage to reduce overhead and prevent errors.",
+    "documentation": "memory-optimization.md",
+    "tags": ["performance", "memory", "optimization"],
+    "severity": "medium",
+    "applies_to": ["all"],
+    "automation_potential": ["profiling", "static-analysis", "code-review"],
+    "suggested_tools": ["memory profilers", "SonarQube"],
+    "related_rules": ["performance-principles", "algorithmic-optimization"]
+  },
+  {
+    "id": "asynchronous-performance",
+    "name": "Asynchronous Performance",
+    "description": "Guidelines for improving throughput and responsiveness using parallel processing and concurrent programming.",
+    "documentation": "asynchronous-performance.md",
+    "tags": ["performance", "asynchronous", "concurrency"],
+    "severity": "high",
+    "applies_to": ["backend", "frontend", "all"],
+    "automation_potential": ["profiling", "code-review"],
+    "suggested_tools": ["Go goroutines", "Python asyncio", "JavaScript Promises"],
+    "related_rules": ["performance-principles", "system-scalability"]
+  },
+  {
+    "id": "database-optimization",
+    "name": "Database Optimization",
+    "description": "Best practices for optimizing database queries, indexing, and connection management.",
+    "documentation": "database-optimization.md",
+    "tags": ["performance", "database", "sql"],
+    "severity": "high",
+    "applies_to": ["backend", "database"],
+    "automation_potential": ["profiling", "static-analysis", "code-review"],
+    "suggested_tools": ["ORM tools", "Database performance monitors"],
+    "related_rules": ["performance-principles", "caching-strategies"]
+  },
+  {
+    "id": "caching-strategies",
+    "name": "Caching Strategies",
+    "description": "Guidelines for implementing multi-level caching to improve response times and reduce backend load.",
+    "documentation": "caching-strategies.md",
+    "tags": ["performance", "caching", "redis"],
+    "severity": "high",
+    "applies_to": ["backend", "frontend", "all"],
+    "automation_potential": ["tool-integration", "code-review"],
+    "suggested_tools": ["Redis", "Memcached", "CDN"],
+    "related_rules": ["performance-principles", "database-optimization", "content-delivery"]
+  },
+  {
+    "id": "system-scalability",
+    "name": "System Scalability",
+    "description": "Principles for designing applications to handle increasing user loads and data volumes.",
+    "documentation": "system-scalability.md",
+    "tags": ["scalability", "performance", "microservices"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices", "devops"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["Kubernetes", "Load Balancers", "Message Queues"],
+    "related_rules": ["performance-principles", "asynchronous-performance", "microservices-best-practices"]
+  },
+  {
+    "id": "content-delivery",
+    "name": "Content Delivery Optimization",
+    "description": "Techniques for optimizing static content delivery using CDNs and lazy loading.",
+    "documentation": "content-delivery.md",
+    "tags": ["performance", "cdn", "lazy-loading"],
+    "severity": "medium",
+    "applies_to": ["frontend", "devops"],
+    "automation_potential": ["ci-cd-check", "tool-integration"],
+    "suggested_tools": ["CDN providers", "Webpack", "Vite"],
+    "related_rules": ["performance-principles", "caching-strategies"]
+  },
+  {
+    "id": "performance-best-practices",
+    "name": "Performance Best Practices",
+    "description": "Holistic approach to performance optimization, ensuring efforts are targeted, effective, and measurable.",
+    "documentation": "performance-best-practices.md",
+    "tags": ["performance", "best-practices", "optimization"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["profiling", "static-analysis", "code-review", "performance-audit"],
+    "suggested_tools": ["Chrome DevTools", "Lighthouse", "WebPageTest", "SonarQube"],
+    "related_rules": ["performance-principles", "algorithmic-optimization", "memory-optimization", "asynchronous-performance", "database-optimization", "caching-strategies", "system-scalability", "content-delivery"]
+  }
+]

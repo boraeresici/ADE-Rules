@@ -1,0 +1,50 @@
+[
+  {
+    "id": "comprehensive-documentation",
+    "name": "Comprehensive Documentation",
+    "description": "All code, especially APIs, should be accompanied by clear and comprehensive documentation.",
+    "documentation": "comprehensive-documentation.md",
+    "tags": ["documentation", "api-docs", "code-comments"],
+    "severity": "high",
+    "applies_to": ["all"],
+    "automation_potential": ["linter", "code-review"],
+    "suggested_tools": ["OpenAPI/Swagger", "JSDoc", "Sphinx"],
+    "related_rules": ["clear-concise-ui-text", "consistency-terminology-style"]
+  },
+  {
+    "id": "clear-concise-ui-text",
+    "name": "Clear and Concise UI Text",
+    "description": "All user interface texts, including labels, buttons, and messages, should be clear, concise, and action-oriented.",
+    "documentation": "clear-concise-ui-text.md",
+    "tags": ["ui", "ux", "copywriting", "readability"],
+    "severity": "high",
+    "applies_to": ["frontend", "ui-ux"],
+    "automation_potential": ["linter", "manual-review"],
+    "suggested_tools": ["Grammarly", "Stylelint"],
+    "related_rules": ["user-centric-guiding-language", "consistency-terminology-style"]
+  },
+  {
+    "id": "user-centric-guiding-language",
+    "name": "User-Centric and Guiding Language",
+    "description": "Use language that is centered on the user's perspective. Error messages should be helpful and guide the user toward a solution.",
+    "documentation": "user-centric-guiding-language.md",
+    "tags": ["ui", "ux", "user-experience", "communication"],
+    "severity": "high",
+    "applies_to": ["frontend", "ui-ux", "backend"],
+    "automation_potential": ["manual-review"],
+    "suggested_tools": ["Grammarly"],
+    "related_rules": ["clear-concise-ui-text", "consistency-terminology-style", "principled-error-handling"]
+  },
+  {
+    "id": "consistency-terminology-style",
+    "name": "Consistency in Terminology and Style",
+    "description": "Use consistent terminology, formatting, and writing style across all documentation and UI components.",
+    "documentation": "consistency-terminology-style.md",
+    "tags": ["ui", "ux", "consistency", "style-guide"],
+    "severity": "high",
+    "applies_to": ["frontend", "ui-ux", "documentation"],
+    "automation_potential": ["linter", "manual-review"],
+    "suggested_tools": ["Stylelint", "Grammarly"],
+    "related_rules": ["clear-concise-ui-text", "user-centric-guiding-language"]
+  }
+]
