@@ -4,12 +4,12 @@ title: "Descriptive Rule Title" # Required: A clear, concise title for the rule 
 description: "A brief summary of what this rule is about and its purpose." # Required: A short description of the rule.
 tags: ["tag1", "tag2", "category"] # Required: An array of relevant tags for categorization and filtering.
 
-# Optional fields for enhanced AI/ADE consumption (from iyilestirme.md suggestions)
-severity: "medium" # Optional: The criticality of the rule (e.g., "critical", "high", "medium", "low", "suggestion")
-applies_to: ["language", "framework"] # Optional: An array of specific languages or frameworks this rule applies to (e.g., ["python", "django", "javascript", "react"])
-automation_potential: ["linter", "manual-review"] # Optional: How this rule can be automated (e.g., "linter", "static-analysis", "runtime-check", "manual-review", "ci-cd-check")
-suggested_tools: ["ESLint", "SonarQube"] # Optional: Specific tools that can help enforce or check this rule.
-related_rules: ["related-rule-id-1", "related-rule-id-2"] # Optional: An array of IDs of other related rules.
+# Optional fields for enhanced AI/ADE consumption (refer to docs/metadata-glossary.md for definitions)
+severity: "medium" # Optional: The criticality of the rule (e.g., "critical", "high", "medium", "low", "suggestion"). See [Metadata Glossary](docs/metadata-glossary.md#1-severity).
+applies_to: ["language", "framework"] # Optional: An array of specific technologies/domains. See [Metadata Glossary](docs/metadata-glossary.md#2-applies_to).
+automation_potential: ["linter", "manual-review"] # Optional: How this rule can be automated. See [Metadata Glossary](docs/metadata-glossary.md#3-automation_potential).
+suggested_tools: ["ESLint", "SonarQube"] # Optional: Specific tools that can help enforce or check this rule. See [Metadata Glossary](docs/metadata-glossary.md#4-suggested_tools).
+related_rules: ["related-rule-id-1", "related-rule-id-2"] # Optional: An array of IDs of other related rules. See [Metadata Glossary](docs/metadata-glossary.md#5-related_rules).
 ---
 
 # Rule: [Descriptive Rule Title]
@@ -61,4 +61,4 @@ related_rules: ["related-rule-id-1", "related-rule-id-2"] # Optional: An array o
 
 **Automation Potential:** [Briefly describe how this rule can be automated or checked by tools. Refer to `suggested_tools` if applicable.]
 
-**Further Reading:** [Optional: Links to external resources, articles, or documentation related to this rule.]
+**Further Reading:** [Provide links to external resources, articles, or documentation related to this rule. This section should contain actual, clickable resources to enrich the rule's context.]
