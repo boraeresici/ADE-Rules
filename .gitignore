@@ -1,4 +1,6 @@
-awesome-rules-main/
+old-rules
 old-docs/
 old docs/
 .DS_Store
+__pycache__/
+*.pyc
