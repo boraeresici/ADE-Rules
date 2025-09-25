@@ -31,6 +31,17 @@ To explore the full set of rules and their detailed documentation, dive into the
 
 [**Explore All Rules**](rules/readme.md)
 
+## 🛠 Validate the Rule Catalog
+
+We provide a Python helper script to make sure each `rules.json` manifest is valid JSON and remains synchronized with the YAML front matter defined inside the Markdown rule files. The validator also checks that metadata values use the allowed vocabulary and that the “Further Reading” placeholder text has been replaced with real resources.
+
+```bash
+pip install pyyaml
+python scripts/validate_rules.py
+```
+
+The command exits with a non-zero status when it detects problems so it can be wired into CI workflows or executed locally before opening a pull request.
+
 ## 🤝 Contributing
 
 We welcome contributions from the community! Whether it's adding new rules, improving existing ones, or enhancing the project's infrastructure, your input is valuable.
