@@ -46,5 +46,17 @@
     "automation_potential": ["ci-cd-check", "test-runner", "code-review"],
     "suggested_tools": ["Jest", "Pytest", "JUnit", "Cypress", "Selenium"],
     "related_rules": ["principled-error-handling", "code-quality-analysis"]
+  },
+  {
+    "id": "e2e-testing-best-practices",
+    "name": "End-to-End Testing Best Practices",
+    "description": "Guidelines for designing, implementing, and maintaining robust end-to-end tests.",
+    "documentation": "e2e-testing/e2e-testing-best-practices.md",
+    "tags": ["e2e", "testing", "qa"],
+    "severity": "high",
+    "applies_to": ["frontend", "backend", "all"],
+    "automation_potential": ["test-automation", "ci-cd-check"],
+    "suggested_tools": ["Cypress", "Playwright", "Selenium"],
+    "related_rules": ["comprehensive-multi-layered-testing", "quality-assurance"]
   }
 ]

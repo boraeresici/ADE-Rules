@@ -1,0 +1,15 @@
+
+[
+  {
+    "id": "supabase-next-auth",
+    "name": "Supabase and Next.js Auth",
+    "description": "Guidelines for implementing modern authentication solutions using Supabase and Next.js.",
+    "documentation": "supabase-next-auth.md",
+    "tags": ["supabase", "nextjs", "auth", "backend", "frontend"],
+    "severity": "high",
+    "applies_to": ["frontend", "backend"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Supabase Auth", "NextAuth.js"],
+    "related_rules": ["general-frontend-best-practices", "backend-fundamentals"]
+  }
+]

@@ -1,0 +1,39 @@
+
+[
+  {
+    "id": "lua-best-practices",
+    "name": "Lua Best Practices",
+    "description": "Guidelines for writing idiomatic, efficient, and maintainable Lua code.",
+    "documentation": "lua-best-practices.md",
+    "tags": ["lua", "best-practices", "language"],
+    "severity": "high",
+    "applies_to": ["embedded-systems", "game-development", "scripting"],
+    "automation_potential": ["lua-linter", "code-review"],
+    "suggested_tools": ["Lua Linter"],
+    "related_rules": ["lua-performance-optimization", "lua-scripting-guidelines"]
+  },
+  {
+    "id": "lua-performance-optimization",
+    "name": "Lua Performance Optimization",
+    "description": "Techniques for optimizing Lua code for speed and efficiency.",
+    "documentation": "lua-performance-optimization.md",
+    "tags": ["lua", "performance", "optimization"],
+    "severity": "high",
+    "applies_to": ["embedded-systems", "game-development", "scripting"],
+    "automation_potential": ["profiler", "code-review"],
+    "suggested_tools": ["Lua Profiler"],
+    "related_rules": ["lua-best-practices"]
+  },
+  {
+    "id": "lua-scripting-guidelines",
+    "name": "Lua Scripting Guidelines",
+    "description": "Best practices for integrating Lua as a scripting language in host applications.",
+    "documentation": "lua-scripting-guidelines.md",
+    "tags": ["lua", "scripting", "integration"],
+    "severity": "medium",
+    "applies_to": ["embedded-systems", "game-development", "host-applications"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": [],
+    "related_rules": ["lua-best-practices"]
+  }
+]

@@ -1,0 +1,51 @@
+
+[
+  {
+    "id": "aws-lambda-function-optimization",
+    "name": "AWS Lambda Function Optimization",
+    "description": "Best practices for optimizing AWS Lambda functions for performance and cost efficiency.",
+    "documentation": "aws-lambda-function-optimization.md",
+    "tags": ["serverless", "aws", "lambda", "optimization"],
+    "severity": "high",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["monitoring", "code-review"],
+    "suggested_tools": ["AWS Lambda Power Tuning", "CloudWatch"],
+    "related_rules": ["serverless-framework-usage", "event-driven-architecture-principles"]
+  },
+  {
+    "id": "azure-functions-best-practices",
+    "name": "Azure Functions Best Practices",
+    "description": "Guidelines for developing and deploying efficient and scalable Azure Functions.",
+    "documentation": "azure-functions-best-practices.md",
+    "tags": ["serverless", "azure", "functions", "best-practices"],
+    "severity": "high",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["monitoring", "code-review"],
+    "suggested_tools": ["Azure Monitor", "Azure CLI"],
+    "related_rules": ["serverless-framework-usage", "event-driven-architecture-principles"]
+  },
+  {
+    "id": "serverless-framework-usage",
+    "name": "Serverless Framework Usage Rules",
+    "description": "Best practices for defining, deploying, and managing serverless applications using the Serverless Framework.",
+    "documentation": "serverless-framework-usage.md",
+    "tags": ["serverless", "framework", "deployment", "devops"],
+    "severity": "medium",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["ci-cd-check"],
+    "suggested_tools": ["Serverless Framework"],
+    "related_rules": ["aws-lambda-function-optimization", "azure-functions-best-practices"]
+  },
+  {
+    "id": "event-driven-architecture-principles",
+    "name": "Event-Driven Architecture Principles",
+    "description": "Guidelines for designing and implementing robust and scalable event-driven architectures.",
+    "documentation": "event-driven-architecture-principles.md",
+    "tags": ["serverless", "architecture", "event-driven"],
+    "severity": "high",
+    "applies_to": ["backend", "architecture"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Kafka", "RabbitMQ", "AWS EventBridge"],
+    "related_rules": ["serverless-framework-usage"]
+  }
+]

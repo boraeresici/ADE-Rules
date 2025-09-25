@@ -1,0 +1,51 @@
+
+[
+  {
+    "id": "zuplo-api-gateway-setup",
+    "name": "Zuplo API Gateway Setup",
+    "description": "Guidelines for setting up and configuring Zuplo as an API Gateway.",
+    "documentation": "zuplo-api-gateway-setup.md",
+    "tags": ["zuplo", "api-gateway", "api-design"],
+    "severity": "high",
+    "applies_to": ["backend", "api"],
+    "automation_potential": ["iac", "ci-cd-check"],
+    "suggested_tools": ["Zuplo CLI"],
+    "related_rules": ["zuplo-security-policies", "zuplo-deployment-gitops"]
+  },
+  {
+    "id": "zuplo-security-policies",
+    "name": "Zuplo Security Policies",
+    "description": "Best practices for implementing security policies within Zuplo API Gateway.",
+    "documentation": "zuplo-security-policies.md",
+    "tags": ["zuplo", "security", "api-gateway"],
+    "severity": "critical",
+    "applies_to": ["backend", "api"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Zuplo CLI"],
+    "related_rules": ["zuplo-api-gateway-setup", "security"]
+  },
+  {
+    "id": "zuplo-deployment-gitops",
+    "name": "Zuplo Deployment with GitOps",
+    "description": "Guidelines for deploying Zuplo API Gateway using GitOps principles.",
+    "documentation": "zuplo-deployment-gitops.md",
+    "tags": ["zuplo", "deployment", "gitops", "ci-cd"],
+    "severity": "high",
+    "applies_to": ["devops", "api"],
+    "automation_potential": ["ci-cd-integration"],
+    "suggested_tools": ["GitHub Actions", "GitLab CI"],
+    "related_rules": ["zuplo-api-gateway-setup", "automate-deployments-ci-cd"]
+  },
+  {
+    "id": "zuplo-performance-optimization",
+    "name": "Zuplo Performance Optimization",
+    "description": "Techniques for optimizing Zuplo API Gateway performance and latency.",
+    "documentation": "zuplo-performance-optimization.md",
+    "tags": ["zuplo", "performance", "api-gateway"],
+    "severity": "high",
+    "applies_to": ["backend", "api"],
+    "automation_potential": ["monitoring", "code-review"],
+    "suggested_tools": ["Zuplo Analytics"],
+    "related_rules": ["zuplo-api-gateway-setup", "performance-optimization"]
+  }
+]

@@ -1,0 +1,39 @@
+
+[
+  {
+    "id": "rust-best-practices",
+    "name": "Rust Best Practices",
+    "description": "Guidelines for writing idiomatic, safe, and efficient Rust code.",
+    "documentation": "rust-best-practices.md",
+    "tags": ["rust", "best-practices", "language"],
+    "severity": "high",
+    "applies_to": ["backend", "system-programming"],
+    "automation_potential": ["clippy", "rustfmt", "code-review"],
+    "suggested_tools": ["Clippy", "Rustfmt"],
+    "related_rules": ["rust-ownership-borrowing", "rust-async-programming"]
+  },
+  {
+    "id": "rust-ownership-borrowing",
+    "name": "Rust Ownership and Borrowing",
+    "description": "Mastering Rust's ownership and borrowing system for memory safety without a garbage collector.",
+    "documentation": "rust-ownership-borrowing.md",
+    "tags": ["rust", "memory-management", "safety"],
+    "severity": "critical",
+    "applies_to": ["backend", "system-programming"],
+    "automation_potential": ["rustc-compiler", "clippy"],
+    "suggested_tools": ["Rust Compiler", "Clippy"],
+    "related_rules": ["rust-best-practices"]
+  },
+  {
+    "id": "rust-async-programming",
+    "name": "Rust Async Programming",
+    "description": "Guidelines for effective asynchronous programming in Rust using `async`/`await`.",
+    "documentation": "rust-async-programming.md",
+    "tags": ["rust", "async", "concurrency"],
+    "severity": "high",
+    "applies_to": ["backend", "network-services"],
+    "automation_potential": ["clippy", "code-review"],
+    "suggested_tools": ["Tokio", "async-std"],
+    "related_rules": ["rust-best-practices"]
+  }
+]

@@ -1,0 +1,15 @@
+
+[
+  {
+    "id": "trpc-api-best-practices",
+    "name": "tRPC API Best Practices",
+    "description": "Guidelines for building end-to-end type-safe APIs with tRPC.",
+    "documentation": "trpc-api-best-practices.md",
+    "tags": ["trpc", "api", "typescript", "fullstack"],
+    "severity": "high",
+    "applies_to": ["frontend", "backend"],
+    "automation_potential": ["typescript-compiler", "code-review"],
+    "suggested_tools": ["tRPC", "TypeScript"],
+    "related_rules": ["javascript-typescript", "api-design"]
+  }
+]

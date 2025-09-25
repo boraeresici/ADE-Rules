@@ -1,0 +1,39 @@
+
+[
+  {
+    "id": "go-best-practices",
+    "name": "Go Best Practices",
+    "description": "Guidelines for writing idiomatic, concurrent, and robust applications in Go.",
+    "documentation": "go/go-best-practices.md",
+    "tags": ["go", "backend", "concurrency"],
+    "severity": "high",
+    "applies_to": ["go", "backend"],
+    "automation_potential": ["go-vet", "golint", "staticcheck", "code-review"],
+    "suggested_tools": ["go vet", "golint", "staticcheck"],
+    "related_rules": ["go-effective-programming", "go-microservices"]
+  },
+  {
+    "id": "go-effective-programming",
+    "name": "Go Effective Programming",
+    "description": "Guidelines for writing idiomatic and effective Go programs.",
+    "documentation": "go/go-effective-programming.md",
+    "tags": ["go", "best-practices", "idiomatic"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices"],
+    "automation_potential": ["go-vet", "golint", "code-review"],
+    "suggested_tools": ["Go Vet", "Golint"],
+    "related_rules": ["go-best-practices"]
+  },
+  {
+    "id": "go-microservices",
+    "name": "Go Microservices Best Practices",
+    "description": "Guidelines for building robust and scalable microservices with Go.",
+    "documentation": "go/go-microservices.md",
+    "tags": ["go", "microservices", "architecture"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Go Micro", "gRPC"],
+    "related_rules": ["go-best-practices", "microservices-best-practices"]
+  }
+]

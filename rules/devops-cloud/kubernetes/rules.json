@@ -1,0 +1,51 @@
+
+[
+  {
+    "id": "container-security-best-practices",
+    "name": "Container Security Best Practices",
+    "description": "Guidelines for securing container images and runtime environments.",
+    "documentation": "container-security-best-practices.md",
+    "tags": ["kubernetes", "container", "security"],
+    "severity": "critical",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["sast", "dast", "ci-cd-check"],
+    "suggested_tools": ["Trivy", "Clair", "Falco"],
+    "related_rules": ["kubernetes-cluster-management-scaling"]
+  },
+  {
+    "id": "kubernetes-cluster-management-scaling",
+    "name": "Kubernetes Cluster Management and Scaling",
+    "description": "Best practices for managing, operating, and scaling Kubernetes clusters.",
+    "documentation": "kubernetes-cluster-management-scaling.md",
+    "tags": ["kubernetes", "cluster", "scaling", "devops"],
+    "severity": "high",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["iac", "monitoring"],
+    "suggested_tools": ["Kubernetes", "Prometheus", "Grafana"],
+    "related_rules": ["container-security-best-practices", "istio-service-mesh-management"]
+  },
+  {
+    "id": "istio-service-mesh-management",
+    "name": "Istio Service Mesh Management",
+    "description": "Guidelines for deploying and managing Istio for advanced traffic management, security, and observability.",
+    "documentation": "istio-service-mesh-management.md",
+    "tags": ["kubernetes", "istio", "service-mesh", "devops"],
+    "severity": "high",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["iac", "ci-cd-check"],
+    "suggested_tools": ["Istio", "Kiali"],
+    "related_rules": ["kubernetes-cluster-management-scaling"]
+  },
+  {
+    "id": "helm-chart-development-usage",
+    "name": "Helm Chart Development and Usage",
+    "description": "Best practices for developing, packaging, and deploying applications using Helm charts.",
+    "documentation": "helm-chart-development-usage.md",
+    "tags": ["kubernetes", "helm", "deployment", "devops"],
+    "severity": "medium",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["ci-cd-check"],
+    "suggested_tools": ["Helm"],
+    "related_rules": ["kubernetes-cluster-management-scaling"]
+  }
+]

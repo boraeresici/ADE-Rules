@@ -24,16 +24,40 @@
     "related_rules": ["python-django", "go", "fastapi", "general-principles"]
   },
   {
-    "id": "go",
+    "id": "go-best-practices",
     "name": "Go Best Practices",
     "description": "Guidelines for writing idiomatic, concurrent, and robust applications in Go.",
-    "documentation": "go.md",
+    "documentation": "go/go-best-practices.md",
     "tags": ["go", "backend", "concurrency"],
     "severity": "high",
     "applies_to": ["go", "backend"],
-    "automation_potential": ["linter", "static-analysis", "code-review"],
+    "automation_potential": ["go-vet", "golint", "staticcheck", "code-review"],
     "suggested_tools": ["go vet", "golint", "staticcheck"],
-    "related_rules": ["python-django", "javascript-typescript", "fastapi", "general-principles"]
+    "related_rules": ["go-effective-programming", "go-microservices"]
+  },
+  {
+    "id": "go-effective-programming",
+    "name": "Go Effective Programming",
+    "description": "Guidelines for writing idiomatic and effective Go programs.",
+    "documentation": "go/go-effective-programming.md",
+    "tags": ["go", "best-practices", "idiomatic"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices"],
+    "automation_potential": ["go-vet", "golint", "code-review"],
+    "suggested_tools": ["Go Vet", "Golint"],
+    "related_rules": ["go-best-practices"]
+  },
+  {
+    "id": "go-microservices",
+    "name": "Go Microservices Best Practices",
+    "description": "Guidelines for building robust and scalable microservices with Go.",
+    "documentation": "go/go-microservices.md",
+    "tags": ["go", "microservices", "architecture"],
+    "severity": "high",
+    "applies_to": ["backend", "microservices"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Go Micro", "gRPC"],
+    "related_rules": ["go-best-practices", "microservices-best-practices"]
   },
   {
     "id": "react-specific",
@@ -70,5 +94,77 @@
     "automation_potential": ["code-review"],
     "suggested_tools": [],
     "related_rules": ["python-django", "javascript-typescript", "go", "react-specific", "fastapi"]
+  },
+  {
+    "id": "lua-best-practices",
+    "name": "Lua Best Practices",
+    "description": "Guidelines for writing idiomatic, efficient, and maintainable Lua code.",
+    "documentation": "lua/lua-best-practices.md",
+    "tags": ["lua", "best-practices", "language"],
+    "severity": "high",
+    "applies_to": ["embedded-systems", "game-development", "scripting"],
+    "automation_potential": ["lua-linter", "code-review"],
+    "suggested_tools": ["Lua Linter"],
+    "related_rules": ["lua-performance-optimization", "lua-scripting-guidelines"]
+  },
+  {
+    "id": "lua-performance-optimization",
+    "name": "Lua Performance Optimization",
+    "description": "Techniques for optimizing Lua code for speed and efficiency.",
+    "documentation": "lua/lua-performance-optimization.md",
+    "tags": ["lua", "performance", "optimization"],
+    "severity": "high",
+    "applies_to": ["embedded-systems", "game-development", "scripting"],
+    "automation_potential": ["profiler", "code-review"],
+    "suggested_tools": ["Lua Profiler"],
+    "related_rules": ["lua-best-practices"]
+  },
+  {
+    "id": "lua-scripting-guidelines",
+    "name": "Lua Scripting Guidelines",
+    "description": "Best practices for integrating Lua as a scripting language in host applications.",
+    "documentation": "lua/lua-scripting-guidelines.md",
+    "tags": ["lua", "scripting", "integration"],
+    "severity": "medium",
+    "applies_to": ["embedded-systems", "game-development", "host-applications"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": [],
+    "related_rules": ["lua-best-practices"]
+  },
+  {
+    "id": "erlang-concurrent-programming",
+    "name": "Erlang Concurrent Programming",
+    "description": "Guidelines for effective concurrent programming in Erlang using Actors and message passing.",
+    "documentation": "erlang/erlang-concurrent-programming.md",
+    "tags": ["erlang", "concurrency", "actors"],
+    "severity": "high",
+    "applies_to": ["backend", "distributed-systems"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Erlang/OTP"],
+    "related_rules": ["erlang-fault-tolerance", "erlang-otp-patterns"]
+  },
+  {
+    "id": "erlang-fault-tolerance",
+    "name": "Erlang Fault Tolerance",
+    "description": "Strategies for building highly available and fault-tolerant systems with Erlang.",
+    "documentation": "erlang/erlang-fault-tolerance.md",
+    "tags": ["erlang", "fault-tolerance", "reliability"],
+    "severity": "critical",
+    "applies_to": ["backend", "distributed-systems"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Erlang/OTP"],
+    "related_rules": ["erlang-concurrent-programming", "erlang-otp-patterns"]
+  },
+  {
+    "id": "erlang-otp-patterns",
+    "name": "Erlang OTP Patterns",
+    "description": "Best practices for utilizing Erlang/OTP behaviors and design principles.",
+    "documentation": "erlang/erlang-otp-patterns.md",
+    "tags": ["erlang", "otp", "design-patterns"],
+    "severity": "high",
+    "applies_to": ["backend", "distributed-systems"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Erlang/OTP"],
+    "related_rules": ["erlang-concurrent-programming", "erlang-fault-tolerance"]
   }
 ]

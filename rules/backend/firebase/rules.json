@@ -1,0 +1,15 @@
+
+[
+  {
+    "id": "firebase-best-practices",
+    "name": "Firebase Best Practices",
+    "description": "Guidelines for developing and deploying applications using Firebase services.",
+    "documentation": "firebase-best-practices.md",
+    "tags": ["firebase", "backend", "serverless", "mobile"],
+    "severity": "high",
+    "applies_to": ["backend", "frontend", "mobile"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Firebase CLI", "Firestore", "Authentication"],
+    "related_rules": ["backend-fundamentals", "serverless-framework-usage"]
+  }
+]

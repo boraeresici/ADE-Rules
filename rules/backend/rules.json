@@ -70,5 +70,41 @@
     "automation_potential": ["sast", "dast", "code-review"],
     "suggested_tools": ["OWASP ZAP", "SAST tools", "WAFs"],
     "related_rules": ["backend-fundamentals", "secure-config-secrets", "strong-auth-crypto"]
+  },
+  {
+    "id": "supabase-next-auth",
+    "name": "Supabase and Next.js Auth",
+    "description": "Guidelines for implementing modern authentication solutions using Supabase and Next.js.",
+    "documentation": "supabase/supabase-next-auth.md",
+    "tags": ["supabase", "nextjs", "auth", "backend", "frontend"],
+    "severity": "high",
+    "applies_to": ["frontend", "backend"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Supabase Auth", "NextAuth.js"],
+    "related_rules": ["general-frontend-best-practices", "backend-fundamentals"]
+  },
+  {
+    "id": "lancedb-best-practices",
+    "name": "LanceDB Best Practices",
+    "description": "Guidelines for optimizing vector database usage and AI applications with LanceDB.",
+    "documentation": "lancedb/lancedb-best-practices.md",
+    "tags": ["lancedb", "vector-database", "ai", "backend"],
+    "severity": "high",
+    "applies_to": ["backend", "ai", "ml"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["LanceDB"],
+    "related_rules": ["database-design", "performance-optimization"]
+  },
+  {
+    "id": "firebase-best-practices",
+    "name": "Firebase Best Practices",
+    "description": "Guidelines for developing and deploying applications using Firebase services.",
+    "documentation": "firebase/firebase-best-practices.md",
+    "tags": ["firebase", "backend", "serverless", "mobile"],
+    "severity": "high",
+    "applies_to": ["backend", "frontend", "mobile"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Firebase CLI", "Firestore", "Authentication"],
+    "related_rules": ["backend-fundamentals", "serverless-framework-usage"]
   }
 ]

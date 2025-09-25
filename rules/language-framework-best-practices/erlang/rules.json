@@ -1,0 +1,39 @@
+
+[
+  {
+    "id": "erlang-concurrent-programming",
+    "name": "Erlang Concurrent Programming",
+    "description": "Guidelines for effective concurrent programming in Erlang using Actors and message passing.",
+    "documentation": "erlang-concurrent-programming.md",
+    "tags": ["erlang", "concurrency", "actors"],
+    "severity": "high",
+    "applies_to": ["backend", "distributed-systems"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Erlang/OTP"],
+    "related_rules": ["erlang-fault-tolerance", "erlang-otp-patterns"]
+  },
+  {
+    "id": "erlang-fault-tolerance",
+    "name": "Erlang Fault Tolerance",
+    "description": "Strategies for building highly available and fault-tolerant systems with Erlang.",
+    "documentation": "erlang-fault-tolerance.md",
+    "tags": ["erlang", "fault-tolerance", "reliability"],
+    "severity": "critical",
+    "applies_to": ["backend", "distributed-systems"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Erlang/OTP"],
+    "related_rules": ["erlang-concurrent-programming", "erlang-otp-patterns"]
+  },
+  {
+    "id": "erlang-otp-patterns",
+    "name": "Erlang OTP Patterns",
+    "description": "Best practices for utilizing Erlang/OTP behaviors and design principles.",
+    "documentation": "erlang-otp-patterns.md",
+    "tags": ["erlang", "otp", "design-patterns"],
+    "severity": "high",
+    "applies_to": ["backend", "distributed-systems"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Erlang/OTP"],
+    "related_rules": ["erlang-concurrent-programming", "erlang-fault-tolerance"]
+  }
+]

@@ -46,5 +46,65 @@
     "automation_potential": ["manual-review"],
     "suggested_tools": ["Architecture Decision Records (ADR)"],
     "related_rules": ["restful-api", "graphql", "grpc"]
+  },
+  {
+    "id": "zuplo-api-gateway-setup",
+    "name": "Zuplo API Gateway Setup",
+    "description": "Guidelines for setting up and configuring Zuplo as an API Gateway.",
+    "documentation": "zuplo/zuplo-api-gateway-setup.md",
+    "tags": ["zuplo", "api-gateway", "api-design"],
+    "severity": "high",
+    "applies_to": ["backend", "api"],
+    "automation_potential": ["iac", "ci-cd-check"],
+    "suggested_tools": ["Zuplo CLI"],
+    "related_rules": ["zuplo-security-policies", "zuplo-deployment-gitops"]
+  },
+  {
+    "id": "zuplo-security-policies",
+    "name": "Zuplo Security Policies",
+    "description": "Best practices for implementing security policies within Zuplo API Gateway.",
+    "documentation": "zuplo/zuplo-security-policies.md",
+    "tags": ["zuplo", "security", "api-gateway"],
+    "severity": "critical",
+    "applies_to": ["backend", "api"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Zuplo CLI"],
+    "related_rules": ["zuplo-api-gateway-setup", "security"]
+  },
+  {
+    "id": "zuplo-deployment-gitops",
+    "name": "Zuplo Deployment with GitOps",
+    "description": "Guidelines for deploying Zuplo API Gateway using GitOps principles.",
+    "documentation": "zuplo/zuplo-deployment-gitops.md",
+    "tags": ["zuplo", "deployment", "gitops", "ci-cd"],
+    "severity": "high",
+    "applies_to": ["devops", "api"],
+    "automation_potential": ["ci-cd-integration"],
+    "suggested_tools": ["GitHub Actions", "GitLab CI"],
+    "related_rules": ["zuplo-api-gateway-setup", "automate-deployments-ci-cd"]
+  },
+  {
+    "id": "zuplo-performance-optimization",
+    "name": "Zuplo Performance Optimization",
+    "description": "Techniques for optimizing Zuplo API Gateway performance and latency.",
+    "documentation": "zuplo/zuplo-performance-optimization.md",
+    "tags": ["zuplo", "performance", "api-gateway"],
+    "severity": "high",
+    "applies_to": ["backend", "api"],
+    "automation_potential": ["monitoring", "code-review"],
+    "suggested_tools": ["Zuplo Analytics"],
+    "related_rules": ["zuplo-api-gateway-setup", "performance-optimization"]
+  },
+  {
+    "id": "trpc-api-best-practices",
+    "name": "tRPC API Best Practices",
+    "description": "Guidelines for building end-to-end type-safe APIs with tRPC.",
+    "documentation": "trpc/trpc-api-best-practices.md",
+    "tags": ["trpc", "api", "typescript", "fullstack"],
+    "severity": "high",
+    "applies_to": ["frontend", "backend"],
+    "automation_potential": ["typescript-compiler", "code-review"],
+    "suggested_tools": ["tRPC", "TypeScript"],
+    "related_rules": ["javascript-typescript", "api-design"]
   }
 ]

@@ -1,0 +1,39 @@
+
+[
+  {
+    "id": "zig-best-practices",
+    "name": "Zig Best Practices",
+    "description": "Guidelines for writing idiomatic, safe, and efficient Zig code.",
+    "documentation": "zig-best-practices.md",
+    "tags": ["zig", "best-practices", "language"],
+    "severity": "high",
+    "applies_to": ["backend", "system-programming"],
+    "automation_potential": ["zig-compiler", "code-review"],
+    "suggested_tools": ["Zig Compiler"],
+    "related_rules": ["zig-comptime-programming", "zig-memory-management"]
+  },
+  {
+    "id": "zig-comptime-programming",
+    "name": "Zig Comptime Programming",
+    "description": "Leveraging Zig's compile-time features for metaprogramming and code generation.",
+    "documentation": "zig-comptime-programming.md",
+    "tags": ["zig", "comptime", "metaprogramming"],
+    "severity": "high",
+    "applies_to": ["backend", "system-programming"],
+    "automation_potential": ["zig-compiler"],
+    "suggested_tools": ["Zig Compiler"],
+    "related_rules": ["zig-best-practices"]
+  },
+  {
+    "id": "zig-memory-management",
+    "name": "Zig Memory Management",
+    "description": "Guidelines for explicit and safe memory management in Zig.",
+    "documentation": "zig-memory-management.md",
+    "tags": ["zig", "memory-management", "safety"],
+    "severity": "critical",
+    "applies_to": ["backend", "system-programming"],
+    "automation_potential": ["zig-compiler", "code-review"],
+    "suggested_tools": ["Zig Compiler"],
+    "related_rules": ["zig-best-practices"]
+  }
+]

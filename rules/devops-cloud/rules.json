@@ -58,5 +58,101 @@
     "automation_potential": ["tool-integration", "ci-cd-check"],
     "suggested_tools": ["Prometheus", "Grafana", "ELK Stack", "Datadog"],
     "related_rules": ["observability-best-practices", "alerting-strategy"]
+  },
+  {
+    "id": "container-security-best-practices",
+    "name": "Container Security Best Practices",
+    "description": "Guidelines for securing container images and runtime environments.",
+    "documentation": "kubernetes/container-security-best-practices.md",
+    "tags": ["kubernetes", "container", "security"],
+    "severity": "critical",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["sast", "dast", "ci-cd-check"],
+    "suggested_tools": ["Trivy", "Clair", "Falco"],
+    "related_rules": ["kubernetes-cluster-management-scaling"]
+  },
+  {
+    "id": "kubernetes-cluster-management-scaling",
+    "name": "Kubernetes Cluster Management and Scaling",
+    "description": "Best practices for managing, operating, and scaling Kubernetes clusters.",
+    "documentation": "kubernetes/kubernetes-cluster-management-scaling.md",
+    "tags": ["kubernetes", "cluster", "scaling", "devops"],
+    "severity": "high",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["iac", "monitoring"],
+    "suggested_tools": ["Kubernetes", "Prometheus", "Grafana"],
+    "related_rules": ["container-security-best-practices", "istio-service-mesh-management"]
+  },
+  {
+    "id": "istio-service-mesh-management",
+    "name": "Istio Service Mesh Management",
+    "description": "Guidelines for deploying and managing Istio for advanced traffic management, security, and observability.",
+    "documentation": "kubernetes/istio-service-mesh-management.md",
+    "tags": ["kubernetes", "istio", "service-mesh", "devops"],
+    "severity": "high",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["iac", "ci-cd-check"],
+    "suggested_tools": ["Istio", "Kiali"],
+    "related_rules": ["kubernetes-cluster-management-scaling"]
+  },
+  {
+    "id": "helm-chart-development-usage",
+    "name": "Helm Chart Development and Usage",
+    "description": "Best practices for developing, packaging, and deploying applications using Helm charts.",
+    "documentation": "kubernetes/helm-chart-development-usage.md",
+    "tags": ["kubernetes", "helm", "deployment", "devops"],
+    "severity": "medium",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["ci-cd-check"],
+    "suggested_tools": ["Helm"],
+    "related_rules": ["kubernetes-cluster-management-scaling"]
+  },
+  {
+    "id": "aws-lambda-function-optimization",
+    "name": "AWS Lambda Function Optimization",
+    "description": "Best practices for optimizing AWS Lambda functions for performance and cost efficiency.",
+    "documentation": "serverless/aws-lambda-function-optimization.md",
+    "tags": ["serverless", "aws", "lambda", "optimization"],
+    "severity": "high",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["monitoring", "code-review"],
+    "suggested_tools": ["AWS Lambda Power Tuning", "CloudWatch"],
+    "related_rules": ["serverless-framework-usage", "event-driven-architecture-principles"]
+  },
+  {
+    "id": "azure-functions-best-practices",
+    "name": "Azure Functions Best Practices",
+    "description": "Guidelines for developing and deploying efficient and scalable Azure Functions.",
+    "documentation": "serverless/azure-functions-best-practices.md",
+    "tags": ["serverless", "azure", "functions", "best-practices"],
+    "severity": "high",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["monitoring", "code-review"],
+    "suggested_tools": ["Azure Monitor", "Azure CLI"],
+    "related_rules": ["serverless-framework-usage", "event-driven-architecture-principles"]
+  },
+  {
+    "id": "serverless-framework-usage",
+    "name": "Serverless Framework Usage Rules",
+    "description": "Best practices for defining, deploying, and managing serverless applications using the Serverless Framework.",
+    "documentation": "serverless/serverless-framework-usage.md",
+    "tags": ["serverless", "framework", "deployment", "devops"],
+    "severity": "medium",
+    "applies_to": ["devops", "backend"],
+    "automation_potential": ["ci-cd-check"],
+    "suggested_tools": ["Serverless Framework"],
+    "related_rules": ["aws-lambda-function-optimization", "azure-functions-best-practices"]
+  },
+  {
+    "id": "event-driven-architecture-principles",
+    "name": "Event-Driven Architecture Principles",
+    "description": "Guidelines for designing and implementing robust and scalable event-driven architectures.",
+    "documentation": "serverless/event-driven-architecture-principles.md",
+    "tags": ["serverless", "architecture", "event-driven"],
+    "severity": "high",
+    "applies_to": ["backend", "architecture"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Kafka", "RabbitMQ", "AWS EventBridge"],
+    "related_rules": ["serverless-framework-usage"]
   }
 ]

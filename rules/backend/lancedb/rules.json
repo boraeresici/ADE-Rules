@@ -1,0 +1,15 @@
+
+[
+  {
+    "id": "lancedb-best-practices",
+    "name": "LanceDB Best Practices",
+    "description": "Guidelines for optimizing vector database usage and AI applications with LanceDB.",
+    "documentation": "lancedb-best-practices.md",
+    "tags": ["lancedb", "vector-database", "ai", "backend"],
+    "severity": "high",
+    "applies_to": ["backend", "ai", "ml"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["LanceDB"],
+    "related_rules": ["database-design", "performance-optimization"]
+  }
+]

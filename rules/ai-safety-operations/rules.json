@@ -118,5 +118,42 @@
     "automation_potential": ["telemetry-collection", "alerting", "dashboarding"],
     "suggested_tools": ["Prometheus", "Grafana", "Datadog", "MLflow"],
     "related_rules": ["feedback-capture", "cost-per-task", "observability-best-practices", "metrics-implementation", "logging-best-practices"]
+  },
+  {
+    "id": "cognee-ai-memory",
+    "name": "Cognee AI Memory Management",
+    "description": "Guidelines for managing memory and context for AI assistants using Cognee.",
+    "documentation": "cognee/cognee-ai-memory.md",
+    "tags": ["cognee", "ai", "memory", "context"],
+    "severity": "high",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Cognee SDK"],
+    "related_rules": ["cognee-best-practices"]
+  },
+  {
+    "id": "cognee-best-practices",
+    "name": "Cognee Best Practices",
+    "description": "General best practices for developing AI systems with Cognee.",
+    "documentation": "cognee/cognee-best-practices.md",
+    "tags": ["cognee", "ai", "best-practices"],
+    "severity": "high",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["code-review"],
+    "suggested_tools": ["Cognee SDK"],
+    "related_rules": ["cognee-ai-memory", "cognee-generate-rules"]
+  },
+  {
+    "id": "cognee-generate-rules",
+    "name": "Cognee Rule Generation",
+    "description": "Guidelines for generating and managing rules for AI assistants using Cognee.",
+    "documentation": "cognee/cognee-generate-rules.md",
+    "tags": ["cognee", "ai", "rules", "automation"],
+    "severity": "medium",
+    "applies_to": ["ai", "llm", "ml"],
+    "automation_potential": ["code-generation"],
+    "suggested_tools": ["Cognee SDK"],
+    "related_rules": ["cognee-best-practices"]
   }
 ]
+
