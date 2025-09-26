@@ -17,3 +17,12 @@
 - Updated `CONTRIBUTING.md` with guidance for rule quality, metadata, and CI validation script planning.
 - Created placeholder `scripts/validate-rules.py` for future CI integration.
 - Updated project version to 1.2.0 in `CONTRIBUTING.md`.
+
+## v1.3.0 — Implementing Prioritized Enhancements & Playbook Scaffolding
+- Updated `CONTRIBUTING.md` with detailed guidance for contributors on:
+  - Applying the granular `severity` scale.
+  - Populating "Further Reading" sections with vetted resources.
+  - Expanding "Automation Potential" sections with concrete snippets.
+  - Introducing Domain Playbooks.
+- Created `rules/playbooks/` directory with an example playbook and `rules.json` scaffolding.
+- Updated project version to 1.3.0 in `CONTRIBUTING.md`.

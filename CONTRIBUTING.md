@@ -2,7 +2,7 @@
 
 We welcome contributions to the ADE Rules project! By contributing, you help us maintain a high standard of quality, consistency, and best practices across our application development environments.
 
-## Version: 1.2.0
+## Version: 1.3.0
 
 ## How to Contribute
 
@@ -44,6 +44,7 @@ To continuously improve the quality and utility of our rules, contributors are e
 *   **Apply Granular Severity Scale:** Review existing rules and update their `severity` metadata to align with the more granular scale defined in the [Metadata Glossary](docs/metadata-glossary.md#1-severity). This helps ADEs prioritize effectively.
 *   **Populate "Further Reading" Sections:** For each rule, research and add at least two authoritative, clickable resources to the "Further Reading" section. This enriches the rule's context and provides credible learning paths.
 *   **Expand Automation Sections:** Where applicable, expand the "Automation Potential" sections with concrete configuration snippets (e.g., sample ESLint rules, SonarQube quality gate settings) and tooling invocation commands. This accelerates ADE enforcement.
+*   **Introduce Domain Playbooks:** For critical categories (e.g., security, DevOps, observability), create companion automation playbooks outlining detection, remediation, and verification checklists that ADEs can execute end-to-end. See `rules/playbooks/` for examples and guidance.
 
 ### Commit Your Changes
 

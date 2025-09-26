@@ -1,0 +1,15 @@
+
+[
+  {
+    "id": "example-security-playbook",
+    "name": "Example Security Incident Playbook",
+    "description": "A step-by-step guide for responding to a common security incident, designed for ADE execution.",
+    "documentation": "example-security-playbook.md",
+    "tags": ["playbook", "security", "incident-response", "automation"],
+    "severity": "critical",
+    "applies_to": ["devops", "security", "all"],
+    "automation_potential": ["tool-integration", "ci-cd-check"],
+    "suggested_tools": ["SIEM", "SOAR", "PagerDuty"],
+    "related_rules": ["secure-logging-monitoring", "automate-vulnerability-management", "incident-path"]
+  }
+]
