@@ -10,3 +10,10 @@
 - Added `awesome-rules-main/` and `old-docs/` to `.gitignore`.
 - Added GitHub repository link to `rules/readme.md`.
 - Updated project version to 1.1.0 in `CONTRIBUTING.md`.
+
+## v1.2.0 — Documentation Enhancements & Validation Planning
+- Implemented feedback: Created `docs/metadata-glossary.md` and updated `rule-template.md` to refer to it.
+- Enhanced `rules/readme.md` with a dynamic, category-based rule index.
+- Updated `CONTRIBUTING.md` with guidance for rule quality, metadata, and CI validation script planning.
+- Created placeholder `scripts/validate-rules.py` for future CI integration.
+- Updated project version to 1.2.0 in `CONTRIBUTING.md`.

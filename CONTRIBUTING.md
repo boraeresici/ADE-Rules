@@ -2,7 +2,7 @@
 
 We welcome contributions to the ADE Rules project! By contributing, you help us maintain a high standard of quality, consistency, and best practices across our application development environments.
 
-## Version: 1.1.0
+## Version: 1.2.0
 
 ## How to Contribute
 
@@ -37,6 +37,14 @@ Our rules are organized into a modular, directory-based structure. Each rule is 
 2.  **Add First Rule:** Follow the "Adding a New Rule" steps to create the first rule within this new category.
 3.  **Create `rules.json`:** Create a `rules.json` file in your new category directory, including the entry for your first rule.
 
+### Enhancing Rule Quality (Ongoing Tasks)
+
+To continuously improve the quality and utility of our rules, contributors are encouraged to address the following:
+
+*   **Apply Granular Severity Scale:** Review existing rules and update their `severity` metadata to align with the more granular scale defined in the [Metadata Glossary](docs/metadata-glossary.md#1-severity). This helps ADEs prioritize effectively.
+*   **Populate "Further Reading" Sections:** For each rule, research and add at least two authoritative, clickable resources to the "Further Reading" section. This enriches the rule's context and provides credible learning paths.
+*   **Expand Automation Sections:** Where applicable, expand the "Automation Potential" sections with concrete configuration snippets (e.g., sample ESLint rules, SonarQube quality gate settings) and tooling invocation commands. This accelerates ADE enforcement.
+
 ### Commit Your Changes
 
 Write clear and concise commit messages. We recommend following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification (e.g., `feat: add new rule for X`, `fix: correct typo in Y rule`).
@@ -58,34 +66,16 @@ Each individual rule (`.md` file) can be considered a versionable unit, with its
 
 *   **`CHANGELOG.md`:** This file tracks significant changes and versions of the entire rule set. Please update it with a summary of your contributions if they introduce major changes or new rules.
 
-## Structure of a Rule File
+## Automated Validation (Planned)
 
-Each rule file (`.md`) should start with YAML frontmatter and follow a consistent Markdown structure:
+We plan to implement a CI validation script (`scripts/validate-rules.py`) to automatically check:
 
-```markdown
----
-id: "unique-rule-id"
-title: "Descriptive Rule Title"
-description: "A concise summary of what this rule is about."
-tags: ["tag1", "tag2", "category"]
----
+*   JSON syntax of all `rules.json` files.
+*   YAML frontmatter syntax and required fields in `.md` files.
+*   Consistency between `.md` frontmatter and `rules.json` entries.
+*   Validation of optional fields against the [Metadata Glossary](docs/metadata-glossary.md).
 
-## Rule: Descriptive Rule Title
-
-**Description:** [Detailed explanation of the rule.]
-
-**Rationale:** [Why this rule is important.]
-
-**Good Practice:**
-```[language]
-// Example of good code
-```
-
-**Bad Practice:**
-```[language]
-// Example of bad code
-```
-```
+Contributors are encouraged to run this script locally before committing changes once it is available.
 
 ## Code of Conduct
 
